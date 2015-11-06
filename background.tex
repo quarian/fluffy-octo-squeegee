@@ -69,19 +69,59 @@ time increase in deposits to open access repositories
 For further reference, we can recommend the work of Stevan Harnad as a good
 starting point to open access literature. He's referenced in
 \cite{DBLP:journals/corr/abs-cs-0606079}, \cite{harnad2004comparing} and
-\cite{harnad2004access}.
+\cite{harnad2004access}. If you are interested in data related to open access,
+it's available botj on the Directory of Open Access Journals as well as in a
+public data repository about hte growth of open access at
+\url{http://dataverse.scholarsportal.info/dvn/dv/dgoa}.
 
 \section{Research data open access publishing}
 \label{sec:research_data_oa}
 
+The idea to make research data openly accessible has been around for a long
+time. As early as 1985 policies and practices to share reserach data to further
+reserach and prevent fraud were developed \cite{fienberg1985sharing}.
+The Internet and the emergence of data intesive science have changed the the
+possibilties and quantities of research data. Research Data Alliance (RDA)
+has been founded in 2013 to address the growing need of research data
+publishing and sharing infrastructure \cite{DBLP:journals/dlib/BermanWW14}
+\cite{DBLP:books/ms/4paradigm09}. Despite this, research data open access
+publishing is far from research paper open access publishing.
+
+Research papers should be self contained in the sense that a if you know the
+area of research, you can read the research paper and understand what it was
+after. Research papers often contain the processed results of the research data
+behind them as well. Research data, however, is rarely self contained and
+requires metadata to be useful for re use. It's also worth noting that datasets
+nowadays will not be used solely by people who are experts in the fields that
+the research data originated from nor will people work in geographically in the
+same locations anymoer which makes metadata even more crucial for reusing the
+data \cite{DBLP:journals/jbi/HarrisTTPGC09} \cite{DBLP:journals/jasis/Borgman12}.
+
 While research papers generally follow an established structure and can easily
 be published online in a PDF format, research data comes in many different
-forms and flavors.
+forms and flavors. For example, phylogenetic trees used in evolution
+research look nothing like the brain images gathered in neuroimaging
+research. This imposes a technical challenge to the solutions that
+could be used to share research data - file formats are different, the
+file size may be range anywhere from few hundred kilobytes to multiple
+terabytes and because many fields don't share common practices on how to
+manage their research data even seemingly similar datasets might be
+incompatible between researchers.  \cite{whitlock2011data}
+\cite{DBLP:journals/fini/PolineBGGHHHHKMPSAK12}
 
-Unlike reserch papers, research data is lacking in good guidelines and
-practices to publish data in an open access way (citation). There is a
-multitude of reasons behind that. The next sections (forward reference) will
-describe those.
+As such, research data open access and publication is not prevalent in many
+fields of science. The practices of data sharing vary a lot between fields and
+even inside disciplines \cite{DBLP:journals/jasis/Borgman12}
+\cite{cragin2010data}. This takes place even while all fields of science are
+becoming more and more data intensive and many fields, such as psychology,
+could reap great benefits from sharing research data
+\cite{DBLP:books/ms/4paradigm09} \cite{wicherts2006poor}. The following
+sections \ref{sec:research_data_challenges} and \ref{sec:research_data_benefits}
+delve deeper into the benefits and challenges of sharing research data by
+publishing it with the open access paradigm.
+
+\section{Challenges of sharing reserach data}
+\label{sec:research_data_challenges}
 
 \subsection{Research data is diverse}
 
@@ -142,6 +182,7 @@ have shown (citation) that organizations need to commit to the idea of open
 access publishing in order for it to work.
 
 \section{Benefits of publishing research data}
+\label{sec:research_data_benefits}
 
 The benefits of research data publishing are not as straightforward as
 publishing papers. Academic credit is distributed by the number of papers you
@@ -261,6 +302,50 @@ papers that are considered high impact and fields that would benefit the most
 from sharing data (such as psychology) do not share their research data
 (citation).
 
+\section{Adherence to data publishing requirements}
+
+Many funding bodies and journals require the publication of research data
+related to the research papers. Adherence to this requirement has been studied
+and the results are that despite the demand for sharing research data it's not
+being shared commonly. In one study 10 datasets were requested from a journal
+that explicitly requests sharing datasets and only one dataset was received
+\cite{savage2009empirical}. In a bigger study the authors were able to gain
+63 datasets out of 249 possible datasets from a journal that also requires
+datasets to be shared for reanalysis \cite{wicherts2006poor}. In a study of
+500 hundred papers, of which 149 were not subject to any research data
+publishing requirements, only 47 papers had submitted the complete raw data
+online. Of the 149 who were not required to do publish research data did not
+publish anything \cite{alsheikh2011public}. The 500 hundred papers in the last
+study were selected from 50 different journals by selecting the 10 research
+papers with the highest impact factor.
+
+The reasons behind not sharing data were different. In the smallest study (\cite{savage2009empirical}),
+where the reserachers were able to contact the people who refused the reasons
+for not sharing are listed below.
+
+\begin{itemize}
+    \item Two email addresses listed on the original research paper were no
+          longer valid and once one of them was reached she was on maternity
+          leave and couldn't help
+    \item Two of those who didn't share didn't give a reason for not sharing - on further
+          inquiry one of them responded that he was not aware of the research
+          data publishing requirements
+    \item One stated that he was too busy and compiling the research data
+          would be too much work
+    \item One had changed institutions and no longer had jurisdiction over the
+          data and the people in the publishing institution responded that
+          sharing would have been too much work
+    \item Three did not answer the inquiry at all at first - on further inquiry
+          one of them replied that he was in favor of sharing data in general
+          but wanted to conduct more research on the research data himself
+          first
+\end{itemize}
+
+In the biggest study the authors postulated that factors such as the 6-12
+months between the publishing of the papers and the authors' investigation
+the reserach data publication policies might have changed, though this is noted
+to be unlikely \cite{alsheikh2011public}.
+
 \section{Sharing Big Data}
 
 Big Data is generally defined by the three Vs - volume, velocity and variety.
@@ -294,7 +379,7 @@ experiments and sharing results even easier. Sharing workflows is common in
 fields where collecting data and doing analysis are easy to automate end to
 end, such as genomics (citations). This thesis does not focus sharing research
 data workflows, but using making the process behind the results more visible
-should make scientific work better.
+should make scientific work better. 
 
 \section{Some technical examples of repository software}
 
