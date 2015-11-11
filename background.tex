@@ -106,8 +106,8 @@ could be used to share research data - file formats are different, the
 file size may be range anywhere from few hundred kilobytes to multiple
 terabytes and because many fields don't share common practices on how to
 manage their research data even seemingly similar datasets might be
-incompatible between researchers.  \cite{whitlock2011data}
-\cite{DBLP:journals/fini/PolineBGGHHHHKMPSAK12}
+incompatible between researchers \cite{whitlock2011data}
+\cite{DBLP:journals/fini/PolineBGGHHHHKMPSAK12}.
 
 As such, research data open access and publication is not prevalent in many
 fields of science. The practices of data sharing vary a lot between fields and
@@ -188,6 +188,32 @@ to public, shown in table \ref{table:reasons_not_sharing}
     \end{tabular}
 \end{table}
 
+The Tenopir paper \cite{tenopir2011data} contains many more userful tables,
+showing for example, that many researchers (56.1\%) either don't know or don't have
+metadata stadards for their research data and data comes in many different
+categories without even going to the soecifics in the fields of science.
+
+Research data may be serious pricavy concern especially in fields such as
+genomics or healthacre related research where reserach data could be connected
+to the participants of the study. There is a tension between sharing relevant
+and good quality data and protecting the privacy of the participants - more
+detailed data provides for a more rich research, but allows for an easier
+connection on to the participants \cite{kaye2012tension}. Work is being done
+to facilitate safe and accurate sharing of data with privacy concerns. Both
+codes of conduct and techonoligal solutions are required, especially since the
+data will outlive the participants of the study and the privacy must be
+preserved for the entirety of the data's lifetime
+\cite{DBLP:journals/jam/NohCJ14a} \cite{knoppers2011towards}.
+
+A more implementation level problem to sharing research data is the fact that
+due to the legal issues or maybe the desire to work on your data before
+publishing it means that reserach data should be able the be shared more
+locally in addition to being open to the whole world. In practice, this means
+that there should be means to provide access to the research data to
+collaborating researchers or people within the research organization you are
+working in to enable collaboration \cite{DBLP:journals/libt/Witt08}.
+
+\iffalse
 \subsection{Research data is diverse}
 
 While research papers generally follow a
@@ -246,8 +272,44 @@ people working with the data need support from their organizations. Studies
 have shown (citation) that organizations need to commit to the idea of open
 access publishing in order for it to work.
 
+\fi
+
 \section{Benefits of publishing research data}
 \label{sec:research_data_benefits}
+
+When talking about the benefits of publishing and sharing reserch data two big
+points are generally made. Firstly it's thought that publishing and sharing
+reserach data pushes science forward by enabling more people to work on the
+data and subsequently accelerate the process of making relevant discoveries.
+It's also not to be forgotten that reproducibility is one of the founding
+pilalrs of scientific process and reqproducing others' work without access
+to their data is very hard \cite{jasny2011again}.
+Secondly it's thought that the publishing of research data makes your
+research papers better, giving them credibility and yielding more citations in
+the process. There are more subtle benefits as well that are discussed later
+in this section.
+
+Publishing research data benefits different stakeholders involved in the
+data publishing game, as shown in figure \ref{fig:beneficaries}. The figure
+also lays out how the rationales of sharing research data affect the different
+stakeholder groups \cite{DBLP:journals/jasis/Borgman12}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/beneficaries}
+    \end{centering}
+    \caption{The different beneficiaries and rationales of data sharing \cite{DBLP:journals/jasis/Borgman12}}
+    \label{fig:beneficaries}
+\end{figure}
+
+Publishing research data furthrers science by allowing new people to ask new
+questions of the existing data \cite{whitlock2011data}, allowing for better
+reproducability \cite{jasny2011again} and straight up widening the scope and
+depth of the research in question \cite{DBLP:journals/see/FischerZ10}.
+By making data publicly available the developers and people not included in the
+scientific community, such as political decision makers, can also benefit from
+the data being generated in the different fields of research
+\cite{DBLP:journals/jasis/Borgman12}.
 
 The benefits of research data publishing are not as straightforward as
 publishing papers. Academic credit is distributed by the number of papers you
