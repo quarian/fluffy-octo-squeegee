@@ -474,7 +474,7 @@ organizations. The biggest ways towards open publishing are listed below.
 \end{itemize}
 
 A more practical look into the different implementations to these as well as
-some practical benchmarking will be presened in section \ref{sec:benchmarking}
+some practical benchmarking will be presened in section \ref{sec:benchmarking}.
 
 \iffalse
 
@@ -545,8 +545,48 @@ months between the publishing of the papers and the authors' investigation
 the reserach data publication policies might have changed, though this is noted
 to be unlikely \cite{alsheikh2011public}.
 
+
+\section{Sharing research workflows}
+
+Since reproduction of results is a big draw towards sharing reserch data
+sharing research workflows has been a subject of research.As an example, you
+could have a look at my\({}_{\mbox{Experiment}}\) or Galaxy 
+(\url{http://www.myexperiment.org/home} and \url{https://galaxyproject.org/}
+respectively). The former is a holistic approach to allow researchers from all
+fields to share workflows, whereas the latter focuses on the field of genomics.
+This approach promotes the transparency of science and enables
+easier reproduction of data. From the scientific literature side you can take
+a look at \cite{goecks2010galaxy} and \cite{DBLP:journals/fgcs/RoureGS09}.
+
+\iffalse
+
+In addition to sharing research data, research has been done in sharing
+reserch workflows. Sharing research data workflows makes replicating
+experiments and sharing results even easier. Sharing workflows is common in
+fields where collecting data and doing analysis are easy to automate end to
+end, such as genomics (citations). This thesis does not focus sharing research
+data workflows, but using making the process behind the results more visible
+should make scientific work better. 
+
+\fi
+
 \section{Sharing Big Data}
 
+The focus of this thesis and the discussion in this literature review has been
+in the traditional research data, but Big Data is becoming more prominient in
+all fields of science. Managing Big Data adds more complexity to the data
+management processes and infrastructure
+\cite{DBLP:conf/cloudcom/DemchenkoZGWL12}. Sharing Big Data is also a wholly
+different concept than sharing more traditional data, since you cannot download
+Big Data datasets on your personal computer. The problem becomes more about
+access controls and providing a secure infrastrucure to access the Big Data
+when collaboration and publication of Big Data is concerned.
+
+An interesting twist to the sharing research workflows and Big Data is the
+Hadoop plug-in for Galaxy, which allows Big Data computation to be integrated
+to the genomics research workflows \cite{DBLP:conf/bcb/PiredduLSZ14}.
+
+\iffalse
 Big Data is generally defined by the three Vs - volume, velocity and variety.
 Volume refers to the amount of data - there are not usually set in stone
 metrics for the volume, but as rule of thumb one should consider a warehouse
@@ -570,27 +610,56 @@ research has gone to sharing big data datasets (cite), but since there is a lot
 of work left to make "small" data sharing and management work this thesis
 focuses on more traditional research data sharing.
 
-\section{Sharing research workflows}
-
-In addition to sharing research data, research has been done in sharing
-reserch workflows. Sharing research data workflows makes replicating
-experiments and sharing results even easier. Sharing workflows is common in
-fields where collecting data and doing analysis are easy to automate end to
-end, such as genomics (citations). This thesis does not focus sharing research
-data workflows, but using making the process behind the results more visible
-should make scientific work better. 
-
-\section{Some technical examples of repository software}
-
-\subsection{Dataverse}
-
-\subsection{Hydra}
-
-\subsection{CKAN}
-
-\subsection{iRODS}
+\fi
 
 \section{Research data curation}
+
+Publishing and sharing research data requires work that is all away from the
+researchers research work. Moreover, after the research data has been published
+it no longer concerns the researcher, but someone has to look after it.
+University libraries have already assumed the role of curating digitally
+published research papers and it would make sense for them to be included in
+the process of research data publication and archival as the curation and
+archival experts  \cite{hjorland2014curating} \cite{heidorn2011emerging}. The
+sharp increase in the amounts of data as well as the growing digitalization of
+research output is going to force libraries to find their role as well as
+researchers to find a way to collaborate with the data management experts to
+make the research data publication and archival as successful as possible.
+
+\section{Implementations in literature}
+
+Some of the techinal solutions for research data management (including
+management during the research projects and publishing data) have been
+documented in scientific literature. They are presented here and a more
+pracical look into some of them is presented in section
+\ref{sec:benchmarking}.
+
+iRODS (Integrated Rule-Oriented Data System) is open source software designed
+for research organizations to manage their research data. iRODS virtualizes the
+storage hardware and offers a programmable rules system to enable automatic
+data management. iRODS website can be found from \url{http://irods.org/} and
+the book about it from \cite{DBLP:series/synthesis/2010Rajasekar}.
+
+CKAN, an open source data publishing platform, is a tool that can be used to
+publish digital research data. It can be found from \url{http://ckan.org/} and
+a paper describing it in use in a academic context can be found in
+\cite{winn2013open}. The article found the CKAN system to be robust open source
+softwarem suitable for publishing research data but not managing the research
+data lifecycle.
+
+Dataverse is an open source data repository software solution which you can
+find online from \url{http://dataverse.org/}. Similarly to CKAN, Dataverse
+focuses on publishing the research data but has more emphasis on getting
+citations on the data and making it that way more comparable to publishing
+research papers. You can read the background from \cite{king2007introduction}.
+
+The Hydra Project, accessible at \url{http://projecthydra.org/} is another open
+source repository solution. What differentiates Hydra from the previous
+implementations is that it's quite flexible - the user can define all the data
+models and the content types that go into the repository. A research paper
+about the system is at \cite{awre2009project}
+
+\iffalse
 
 \section{Interesting research data related literature}
 
@@ -826,3 +895,5 @@ Article \cite{bailey2008open} is a nice summary about what is open access.
 
 Article \cite{DBLP:journals/corr/abs-cs-0606079} is a longe study about OA
 advantage.
+
+\fi
