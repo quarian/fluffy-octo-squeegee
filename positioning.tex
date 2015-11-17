@@ -1,17 +1,76 @@
 \chapter{Positioning the Thesis}
 \label{chapter:positioning}
 
-In this chapter the thesis is positioned to the existing landscape. TODO:
-figure out a proper way to reference interviews.
+Master's theses don't live in a vacuum. To position the thesis and provide the
+best possible outcome for Aalto University we made an effort to find out what
+is the current state of research data publishing and sharing as well as what
+are the current challenges and projects in the Finnish landscape. While the
+literature review in Section \ref{chapter:background} covered the overall view
+of the current status of publishing and sharing research data and research
+papers, the goal of this thesis is to provide value in the context of Finland.
+The tools used to position the thesis were interviews, benchmarking existing
+solutions and a questionnaire.
 
-\section{Expert interviews}
+\section{Researcher interviews}
 \label{sec:expert_interviews}
 
-For the thesis many experts from different positions were interviewed. The goal
-of the interviews was to get a more current look into the world of research
-data sharing as well as establish what could be the role of Aalto Univrersity
-as well as universities in general.
+Scientists and researchers are the core user group of any publishing or sharing
+system since they are the ones generating the data to the system and populating
+the system. The research also shows that a succesful repository system requires
+user engagement \cite{DBLP:conf/ercimdl/Martinez-UribeM09}. Scientist and
+researcher interviews were concudcted within different researcher groups and
+researcher in Aalto Otaniemi campus. The goal of these interviews was to learn
+how data management is taught and used in Aalto University and what are the
+scientist and researchers perceptions on sharing and publishing research data.
+Previous experiences with sharing and using others' data were also gathered.
 
+In an interview with a research group\footnote{M. Nurmela and the Complex
+Networks group at Aalto University, \url{http://becs.aalto.fi/en/research/complex\_networks},
+personal communication, July 31st, 2015} the findings fell in line with the
+findings from literature. Data management is not taught for the researchers and
+there is no culture or experience in sharing data. Upon questioning it became
+clear that the data in the posession of the researchers would have required
+a lof of cleaning and metadata additions prior to publishing - no surprise
+considering the fact that the datasets they were using were not designed to
+go public in the first place. Though lack of metadata practices and lack of
+publishing infrastructure were also brough up.
+
+Some members of the research group had shared some of their datasets through
+public cloud services such as Google Drive\footnote{\url{http://drive.google.com/}}
+with collaborators and used others' datasets. This also raised the point that
+in order to use others' datasets they had been asked to cite the papers that
+used that dataset, underlining the the undeveloped culture of research data
+sharing. Some members of the group saw big advantages in making research output
+public, especially from the angle of reproducability, but also raised concerns
+about the privacy issues that for example telecommunication data would cause.
+The members of the group were also concerned about about the size of their
+data, since using the existing solutions to share hundreds of gigabytes would
+prove cumbersome.
+
+One member of the group had taken a role of a mentor wit the data management
+issues, teaching the others to use databases and version control software to
+handle their data and code. The other members of the group, interviewed
+separately, noted that an effort had been made towards better policies in data
+handling. The group pointed out that personalized assistance and word of mouth
+were an efficient way to learn "boring" things like data management. Own
+previous experience and learning by doing seemed to be the main way people had
+learned to, for example, comment their code or arrange their research data into
+databases so that accessing them would require less time and managing code
+would be easier.
+
+Discussions with the complex networks groups also brought up the point that
+even though some data could be published for all the world to see, some data
+should be only accessible to people within Aalto University and some should
+even have a more fine grained access control set to them.
+
+In a separate interview with a brain image researcher\footnote{M. Nurmela and
+E. Glerean, personal communication, August 13th, 2015} similar concerns arose.
+Brain imaging data is large and that makes sharing it hard. Brain images are
+also considered personal data and publishing them is problematic. The
+researcher expressed interest in sharing and using others' datastests, but
+lacked the tools to do so.
+
+\iffalse
 \section{Scientists}
 
 Scientists would be the main user or stakeholder that would use the system. It
@@ -32,8 +91,72 @@ publish research data should look like if it were to be implemented.
 
 \subsection{Results of the interviews}
 
-\section{Science IT staff}
+\fi
 
+\section{Science IT staff}
+\label{sec:sci_it}
+
+If a system to publish and share research data would come to be it would have
+to be maintained and run by people other than the reserachers, since the job of
+the researchers is to do research and not maintain sofware systems. With this
+in mind the people managin the scientific IT systems are a key component to
+building a succesful research data management, publication and sharing
+platform.
+
+In interviews with a scientific IT systems specialist\footnote{M. Nurmela and
+M. Hakala, personal communication, July 1st and 7th, 2015} the findings again
+aligned with the findings from literature. There is a lack of metadata
+standards that would make data storage and management uniform across
+institutions and disciplines. Finland has projects going on related to open
+science\footnote{\url{http://avointiede.fi/}} and CSC \footnote{\url{https://www.csc.fi/}} is
+building scientific computing environments for Finnish instituitons (research,
+library, archival, education and such). According to the specialist
+collaborating with all these ongoing projects would benefit both parties and
+also allow Alto University to develop systems that are not just point
+solutions. This would also make sense from a financial point and practical
+point of view, since research is nowadays done in collaboration with other
+insitutions and working together would enable that.
+
+From the point of view of IT system specialist the ideal system for research
+data includes the whole lifecycle of the data. This entails education on how
+to manage the data from the creation to the publishing and infrastructure that
+can be tailored to fit the different user needs. Research data is comes in
+many forms so a solution that is not flexible would be unsuitable.
+
+University of Jyväskylä has implemented a data repository system\footnote{\url{https://dvn.jyu.fi/dvn/}}
+as well as an iRODS\footnote{\url{http://irods.org/}} system to manage and
+store research data. In an interview\footnote{M. Nurmela, I. Korhonen and A.
+Auer, personal communication, August 19th, 2015} they noted that nowadays
+universities need a platform to publish research data. Jyväskylä is among the
+first in Finland to implement a data plicy in practice, offering an
+infrastructure to manage data during the research projects and publish the
+results in the end (even though Dataverse and iRODS are not currently
+easily compatible with each other, though some work has been done for
+that\footnote{\url{https://irods.org/wp-content/uploads/2014/06/Odum-DFC-iRODS-Boston.pdf}}).
+They are also working with CSC to get their iRODS system talking with the iRODS
+system at CSC.
+
+The Jyväskylä experts told that while the Dataverse system was easy to install
+and modify to accept Jyväskylä credentials, it still had a long way to go
+before it was universally accepted within the university. At the time of
+writing this, the Jyväskylä Dataverse has been runnign for appriximately a
+year and it contains a grand total of seven files. Some research groups,
+however, are using it manage their internal datasets. As to how to get the
+more datasets into the system, they planned to continue educating about it
+and making it that way a part of researchers' routine.
+
+Jyväskylä was more involved in development of the iRODS system, having even
+developed a system to facilitate collaboration between reserachers
+\cite{irodsinproceedings}. The Kanki system is a desktop interface to the iRODS
+system that allows users to easily access and modify data stored in the iRODS
+data grid. The Kanki system is not about publishing research data but data
+management during a research project. iRODS also has federation capabilities,
+meaning that two iRODS instances could be integrated such that you could
+access the data from the other system. When writing this Jyväskylä and CSC
+were planning to start testing the fedration capabilites. Following up on that
+on a later date would be interesting.
+
+\iffalse
 If there was to be a system to manage and publish research data, it would have
 to be maintained by someone. The obvious answer is to go to the administrators
 of institutional software infrastructure.
@@ -51,8 +174,43 @@ also knowledgeable on how things are handled right now.
 
 \subsection{Results of the interviews}
 
+\fi
+
 \section{Project managers on research data related systems}
 
+Building and running software systems requires commitment not only from the
+primary users disucssed in Sections \ref{sec:expert_interviews} and
+\ref{sec:sci_it} but the management that supports them. The priorities of the
+managerial types might not lie in the usability or maintainability of the
+system, but rather in managing costs and minimizing risks.
+
+From Aalto side the desire is to minimize the systems we have to build and
+maintain ourselves - since CSC exists to provide scientific computing and
+storage resources, why should we not use them? Non established or new fields
+of science could have value from a local repository, but those that have
+international or discipline specific repositories could use those as well.
+\footnote{M. Nurmela, A. Sunikka, personal communication, July 17th, 2015}
+Certainly managing research data is a problem and a consensus solution has not
+emerged.
+
+The Finnish National library is in charge of long term preservation of relevant
+objects in the Finnish research. They are building a long term storage
+solution\footnote{\url{http://avointiede.fi/tutkimus-pas}}, data management
+plan tool\footnote{\url{http://portti.avointiede.fi/tutkimusdata/tuuli-tyokalu-tutkimuksen-datanhallinnan-suunnitteluun}} and managing the Finnish unique identifier
+service\footnote{\url{http://www.kansalliskirjasto.fi/fi/julkaisuala/urn.html}}.
+They also manage a Finnish cultural repository\footnote{\url{https://www.finna.fi/}}.
+
+The most important thing to for the project manager at the National Library
+was that metadata associated with the data has to be good - otherwise
+archiving, managing and reuse is impossible. Making metadata work within an
+insitution requires commitment from all levels of management and tools to
+facilitate that. It's also important to note that even if two systems within
+different organizations would be technologically perfeclty compatible,
+the bottlenecks might stem from different policies in different organizations
+and the bureucracy that comes with it. This thought lessens the burden for all
+technology to be perfeclty compatible. \footnote{M. Nurmela and E. Keskitalo, personal communication, August 21st, 2015}
+
+\iffalse
 Implementation and running of different systems related to research data
 management and publishing are being implemented and developed around Finnish
 institutions. While people working on and with these systems were included in
@@ -72,6 +230,8 @@ to try make systems talk to each other and not everyone to implement their own
 system in their own silo.
 
 \subsection{Results of the interviews}
+
+\fi
 
 \section{Librarians}
 
