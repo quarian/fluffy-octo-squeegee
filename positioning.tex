@@ -271,7 +271,9 @@ data, the collaboration between the institutions' systems is likely to be
 more difficult in the policy and bureucracy sense. There are also many
 unresolved questions related to long term storage. Who decides what datasets
 are used for the long term storage? What kind of metadata long term storage
-requires in addition to the metadata already in the original dataset? The work
+requires in addition to the metadata already in the original dataset? What
+is the most suitable file format for long term storage, since tools and
+software used to create it outdated relatively soon? The work
 to figure out these things and the Finnish long term archival project is going
 on during the writing of this thesis.\footnote{M. Nurmela and E. Keskitalo, personal communication, August 21st, 2015}
 
@@ -342,8 +344,41 @@ currently in the university?
 
 \fi
 
-\section{Representatives from CSC}
+\section{CSC and national level things}
 
+CSC is the national computing service provider for Finnish institutions. They
+offer both computing power and disk space for Finnish institutions and they
+are a state-owned non-profit organization.\footnote{\url{https://www.csc.fi/csc}}
+Their role is interesting when it comes to research data managemnet and
+publishing, since they already offer computing services to the relevant
+institutions in Findland. After all, one goal of publishing and sharing
+research data is to enable collaboration and involving the one institution
+in Finland that offers services to all the other institutions makes sense in
+that regard.
+
+One of CSC's services related to reserach data management is the IDA
+service\footnote{\url{http://avointiede.fi/ida}} that is specifically
+designed to store research data and the related metadata. CSC also maintians
+Etsin\footnote{\url{https://etsin.avointiede.fi/}}, a service to host
+metadata related to research data as well as links to the location of thedata.
+Etsin itself does not contain datasets.
+These efforts fall under the national project of Open
+Science\footnote{\url{http://openscience.fi/}} (Avoin Tiede ja Tutkimus in
+Finnish) that promotes the openness of resesarch and science. On the top level
+these initiatives have been put into motion by the Ministry of Education and
+Culture\footnote{\url{http://www.minedu.fi/OPM/?lang=en}}.
+
+The IDA service, however, has not been very widely adopted as a place to store
+and share research data. This has to do with IDA's user interface and the fact
+that the iRODS backend is not designed for publishing information. Issues with
+policies and permissions also hinder the publication process.\footnote{M.
+Nurmela and S. Westman, personal communication, August 14th, 2015} In addition
+to the technical matters there is of course the fact that institutions, such as
+unversities, do not have a very well developed culture for research data
+management or publishing which also contributes to this.
+
+
+\iffalse
 CSC offers an interesting angle to the research data management problem. CSC
 offers nationwide computing services and they should have a role in sharing and
 managing research data.
@@ -390,6 +425,8 @@ sector and if they do not have plans what is going on with that.
               there is no common push towards data repository or managing
               research data
 \end{itemize}
+
+\fi
 
 \section{Data management questionnaire}
 \label{sec:questionnaire}
