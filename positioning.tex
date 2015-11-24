@@ -428,18 +428,55 @@ sector and if they do not have plans what is going on with that.
 
 \fi
 
-\section{Data management questionnaire}
+\section{Research data management questionnaires}
 \label{sec:questionnaire}
 
-A study was conducted in Aalto University about data management. The goal of
-the study was to find out the current needs as well as the current status of
-research data management within Aalto University (TODO: figure out a good way
-to cite this study). 87 people submitted answers to the study from all the
-schools in Aalto. The breakdown of answers is shown in figure (reference to the
-figure).
+Two studies were conducted in Aalto University about research data management
+and sharing. The goal of the studies was to find out the current needs as well
+as the current status of research data management within Aalto University. The
+studies were carried out as questionnaires and the questionnaires were
+distributed to all branches of Aalto.
 
-The study outlined the challenges within Aalto University. The answers asked
-most for services in storing data, metadata, finding data, archiving, sharing
+The first questionnaire divided
+the research process in the context of research data into four phases, which
+are the defining of the research scope, the research, publishing the research
+data and archiving the research data. 87 people submitted answers to the study from all the
+schools in Aalto. The breakdown of answers is shown in Figure \ref{fig:chart_answers}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/chart_answers}
+    \end{centering}
+    \caption{The respondents to the first questoinnaire, divided by the school of the respondents}
+    \label{fig:chart_answers}
+\end{figure}
+
+The biggest challenges reported by the questionnaire were with the actual
+research process and the archiving of data, as outlined by Figure
+\ref{fig:challenges}. During the scope defining phase of the research the
+research data challenges mentioned were storage, availability and version
+control. The actual research phase contained many challenges, biggest of which
+were the lack of storage space, the size and amount of files generated (the
+current system could not handle them) and the challenges with data
+availability. The problems with sharing research data came from the lack of
+sharing infrastructure, version control, storage space (quantity and
+persistence - no way to persist digital files) and other restrictions, such
+as privacy concerns or classified data. The single biggest problem with
+archiving research data was that there is no infrastructure for archiving
+research data.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/challenges}
+    \end{centering}
+    \caption{The biggest challenges with research data management, divided by the phase of research process}
+    \label{fig:challenges}
+\end{figure}
+
+\pagebreak
+
+The greatest need for services derived from the first questionnaire was
+reported in storing data, metadata, finding data, archiving, sharing
 and backing up data. The challenges where the requirements span from are both
 technological and policy related. In the list below the the answers are
 compiled by percentages:
@@ -459,7 +496,56 @@ compiled by percentages:
     \item Failed backup, 8\%.
 \end{itemize}
 
-The study shows that there are indeed a need already in place for a system to
+The second questionnaire has 368 respondents, divided into different branches
+of Aalto as shown in Figure \ref{fig:answers_branches}.
+
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/answers_branches}
+    \end{centering}
+    \caption{The affiliation of the respondents to the second questionnaire}
+    \label{fig:answers_branches}
+\end{figure}
+
+NOTE: I need to make graphical representations of the findings from the
+second questionnaire.
+
+The second questionnaire found that the most important things for data
+management and sharing system would be that the data can easily be files
+could be worked on in collaboration, big files that you cannot attach to
+emails could be shared and that there would be version control for the files.
+Research data would mostly be shared between Aalto University staff, but
+sharing with collaborators outside Aalto, sharing with students as well as
+personal file storage were required of the system. The research data should be
+accessible with personal computers in addition to Aalto workstations.
+
+The types of files people would need to save are very varied - the most
+popular type of files are Microsoft Office style files (text documents and
+spreadsheets) and PDF files. Different image, video, sound, code and other
+formats are brought up in the questionnaire, even virtual machine images.
+The amount of required storage space varies from 10Gt to over 500Gt. The most
+common storage time for research data is measured in years, since projects that
+is the scope of research projects and data management is required throughout
+the project.
+
+Most of the respondents of the second questionnaire handle their research data
+every day and their research data is confidential. Not all confidential data
+needs to be shared outside Aalto University, but most respondents had to do
+that from time to time.
+
+Most of the respondents used existing cloud services, such as Google Drive or
+Dropbox to do research data management during their projects. The systems are
+used both out of necessity (there is no existing Aalto infrastructure, for
+example, to have non-Aalto people working on the same datasets or files) and
+because they are easy to use and people have experience from using them from
+outside of work. For some, this is not an option, since some data has to be
+stored in Finland and the cloud providers cannot comply to that request.
+
+TODO: there is a hefty amount of freeform feedback from the second
+questionnaire, need to go through it and fill in important details.
+
+These studies show that there are indeed a need already in place for a system to
 manage research data in Aalto as well as training and policies to support data
 management through the lifecycle of data.
 
