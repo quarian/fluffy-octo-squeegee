@@ -555,9 +555,44 @@ management through the lifecycle of data.
 Technical solutions to publishing and managing research data exist already, many
 of them open source and free. Some of the solutions were mentioned in the
 literature review in section \ref{sec:implementations_literature}. This section describes
-those systems and some other in more practical detail.
+those systems and some other in more practical detail. The benchamrking was
+done using online demo versions of the software, reading the related
+documentation and in some cases examining the source codes and installation
+processes that they required.
 
 \subsection{Harvard Dataverse}
+
+Harvard Dataverse is a Harvard University originated open source system
+for research data publication. This system was benchmarked by both reading the
+relevant documentation as well as making a local installation for testing
+purposes - more on the test installation on Section \ref{chapter:prototype}.
+It is implemented with Java and is available
+online at GitHub\footnote{\url{https://github.com/IQSS/dataverse}}. Their
+website\footnote{\url{http://dataverse.org/}} reports that the Dataverse
+softare would be installed in 12 universities around the world, but since this
+number does not include, for example, the Jyväskylä Universiy Dataverse making
+it reasonable to assume that there are other Dataverse out in the world. The
+main Harvard Dataverse \footnote{\url{https://dataverse.harvard.edu/}}, which
+is the biggest Dataverse instance around, contains 59 652 datasets that contain
+288 174 files as of writing this thesis.
+
+Dataverse offers a wide range of features. It generates citeable DOIs for
+datasets published in it and it also allows the administrator of the system
+to use Handle identifiers\footnote{\url{https://www.handle.net/}} out of the
+box as well. It has a publishing workflow that allows for saving of drafts and
+review before publishing. Faceted metadata based fulltext search makes datasets
+discoverable and metadata can be added both to the dataset level and the file
+level. The access control system built into Dataverse allows permissions to be
+granted to individuals and groups alike. The access controls can also be
+integrated with Shibboleth\footnote{\url{https://shibboleth.net/}}, which is in
+wide use across research institutins across the globe. For a full list of
+features, source coude and other relevant information see the links in the
+footnotes.
+
+Dataverse is a functional system for publishing research data. It is not a tool
+for managing reserch data during the research project, but it could be used
+even during that time to share research data with collaborators. It also does
+not offer long term archival options out of the box.
 
 \subsection{Hydra project}
 
