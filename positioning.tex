@@ -345,6 +345,7 @@ currently in the university?
 \fi
 
 \section{CSC and national level things}
+\label{sec:csc}
 
 CSC is the national computing service provider for Finnish institutions. They
 offer both computing power and disk space for Finnish institutions and they
@@ -609,7 +610,10 @@ The Hydra project is a Ruby on Rails\footnote{\url{http://rubyonrails.org/}}
 application built on top of the Fedora repository software\footnote{\url{http://www.fedora-commons.org/}}.
 It uses a project called Blacklight\footnote{\url{http://projectblacklight.org/}}
 for the discovery platform and similarly to Dataverse it uses Apache Solr to
-index data stored in the Fedora repository.
+index data stored in the Fedora repository. The code for the Hydra project is
+available at GitHub\footnote{\url{https://github.com/projecthydra}} and the
+developer community maintains a wiki online\footnote{\url{https://wiki.duraspace.org/display/hydra/The+Hydra+Project}}. The Hydra website lists 29 universities and institutions that have
+adopted the Hydra software, mostly in the USA.
 
 Hydra project is very flexible - it is used around the world for insitutional
 repositories, museum websites, cultural heritage storage and other similar
@@ -621,7 +625,34 @@ are open source they are still tightly connected to the institutions that
 implemented them, demanding still work if they were to be adopted to a new
 institution.
 
+Hydra project is aimed to archiving and publishing data. It is not designed as
+a tool for managing data during research projects.
+
 \subsection{iRODS}
+
+iRODS\footnote{\url{http://irods.org/}} is a data management software used by many research institutions to
+manage research data. It is open source and available on GitHub\footnote{\url{https://github.com/irods}}
+along with the many libraries and software components that come with it. iRODS
+virtualizes storage hardware, which in part constitutes to the amount of
+different software packages that go into it, since different hardware requires
+different drivers and many contributors have implemented their own packages for
+iRODS. For the purposes of this thesis an instance of iRODS was not installed,
+but experts and users of the system were interviewed and documentation was read
+along with the code.
+
+In addition to virtualizing the storage hardware iRODS offers data discovery
+by compiling metadata about the files and folders in the system to a metadata
+catalog. The iRODS rules engine allows the users to program workflows and
+automated events to the system. Newer versions (since iRODS 3) of iRODS allow
+iRODS systems to be federated, which means that two iRODS systems from
+different origins can share data easily.
+
+In Finland iRODS is in use at least in the University of Jyväskylä and in the
+systems of CSC (the IDA system mentioned in Section \ref{sec:csc} uses iRODS.
+The iRODS systems in Finland focus on enabling researcher collaboration, which
+is the role iRODS is primarily designed for. The iRODS architecture is not
+designed for sharing data, but could be used as a part of a system that shared
+data.
 
 \subsection{CKAN}
 
