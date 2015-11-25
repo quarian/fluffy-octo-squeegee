@@ -567,12 +567,17 @@ for research data publication. This system was benchmarked by both reading the
 relevant documentation as well as making a local installation for testing
 purposes - more on the test installation on Section \ref{chapter:prototype}.
 It is implemented with Java and is available
-online at GitHub\footnote{\url{https://github.com/IQSS/dataverse}}. Their
-website\footnote{\url{http://dataverse.org/}} reports that the Dataverse
-softare would be installed in 12 universities around the world, but since this
+online at GitHub\footnote{\url{https://github.com/IQSS/dataverse}}. Dataverse
+uses Apache Solr\footnote{\url{http://lucene.apache.org/solr/}} ot index its
+PostgreSQL\footnote{\url{http://www.postgresql.org/}} database to facilitate
+faceted search. For server software you can use Glassfish\footnote{\url{https://glassfish.java.net/}}
+or Apache\footnote{\url{https://httpd.apache.org/}}.
+
+Their website\footnote{\url{http://dataverse.org/}} reports that the Dataverse
+software would be installed in 12 universities around the world, but since this
 number does not include, for example, the Jyväskylä Universiy Dataverse making
 it reasonable to assume that there are other Dataverse out in the world. The
-main Harvard Dataverse \footnote{\url{https://dataverse.harvard.edu/}}, which
+main Harvard Dataverse\footnote{\url{https://dataverse.harvard.edu/}}, which
 is the biggest Dataverse instance around, contains 59 652 datasets that contain
 288 174 files as of writing this thesis.
 
@@ -595,6 +600,26 @@ even during that time to share research data with collaborators. It also does
 not offer long term archival options out of the box.
 
 \subsection{Hydra project}
+
+The Hydra project is an open source digital repository solution. The Hydra
+solution was also tested during the writing of this thesis by installing and
+setting up the system in addition to reading the related documentation.
+
+The Hydra project is a Ruby on Rails\footnote{\url{http://rubyonrails.org/}}
+application built on top of the Fedora repository software\footnote{\url{http://www.fedora-commons.org/}}.
+It uses a project called Blacklight\footnote{\url{http://projectblacklight.org/}}
+for the discovery platform and similarly to Dataverse it uses Apache Solr to
+index data stored in the Fedora repository.
+
+Hydra project is very flexible - it is used around the world for insitutional
+repositories, museum websites, cultural heritage storage and other similar
+projects. Extensibility comes with a price, since an out of the box Hydra
+installation requires the user to configure all the types of data you would
+need for your chosen repository. Many implementations do exist, since Hydra
+has been adopted around the world, but despite the fact that these solutions
+are open source they are still tightly connected to the institutions that
+implemented them, demanding still work if they were to be adopted to a new
+institution.
 
 \subsection{iRODS}
 
