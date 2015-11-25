@@ -595,6 +595,12 @@ wide use across research institutins across the globe. For a full list of
 features, source coude and other relevant information see the links in the
 footnotes.
 
+Dataverse allows manual upload of datasets and an API to explore datasets
+and upload them programmatically. Once published, new versions of datasets
+can be uploaded and all the versions remain visible. Dataverse also includes
+TwoRavens\footnote{\url{http://datascience.iq.harvard.edu/about-tworavens}}
+for visualizing tabular datasets.
+
 Dataverse is a functional system for publishing research data. It is not a tool
 for managing reserch data during the research project, but it could be used
 even during that time to share research data with collaborators. It also does
@@ -623,7 +629,7 @@ need for your chosen repository. Many implementations do exist, since Hydra
 has been adopted around the world, but despite the fact that these solutions
 are open source they are still tightly connected to the institutions that
 implemented them, demanding still work if they were to be adopted to a new
-institution.
+institution. Some Hydra versions have dataset versioning implemented.
 
 Hydra project is aimed to archiving and publishing data. It is not designed as
 a tool for managing data during research projects.
@@ -647,6 +653,10 @@ automated events to the system. Newer versions (since iRODS 3) of iRODS allow
 iRODS systems to be federated, which means that two iRODS systems from
 different origins can share data easily.
 
+iRODS is implemented in C++ and it offers clientAPIs for multiple programming
+languages. iRODS also scales from single personal computers into large data
+grids.
+
 In Finland iRODS is in use at least in the University of Jyväskylä and in the
 systems of CSC (the IDA system mentioned in Section \ref{sec:csc} uses iRODS.
 The iRODS systems in Finland focus on enabling researcher collaboration, which
@@ -656,7 +666,29 @@ data.
 
 \subsection{CKAN}
 
+CKAN\footnote{\url{http://ckan.org/}} is an open source data portal software that aims to make data available
+over the Internet. CKAN instance was not installed for the purposes of this
+thesis, but a demo CKAN cite\footnote{\url{http://demo.ckan.org/}} was tested
+in addition to the documentation being read. CKAN is implemented in Python and
+it uses Apache Solr to to index a PostgreSQL database, much like Dataverse.
+
+CKAN offers full text search of dataset metadata and versioning of datasets.
+CKAN also allows for robust customization and data visualization as well as
+uploads through a web interface and an API. The access controls to the CKAN
+are coarse grained, public sharing of datasets or sharing withing an
+organization. CKAN is also promotes its extensibility, and indeed it has been
+adopted, for example, as the frontend of the CSC's
+services\footnote{\url{https://github.com/kata-csc}}. What separates CKAN from
+the other repository solutions is that it offers extensive geographic
+
+CKAN is designed for publishing and sharing data and not for managing data
+during the project it's being created.
+
 \subsection{Invenio and Zenodo}
+
+Invenio\footnote{\url{http://invenio.readthedocs.org/en/latest/}} is a CERN
+originated digital library management software. It started as the CERN
+documentation server, hosting over 1 000 000 bibliographic records.
 
 \subsection{GitHub}
 
