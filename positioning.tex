@@ -561,6 +561,15 @@ done using online demo versions of the software, reading the related
 documentation and in some cases examining the source codes and installation
 processes that they required.
 
+For a more visual overview, see Section \ref{chapter:conclusions} for an
+overview table of existing solutions. The Section \ref{chapter:prototype}
+contains a more technical view on some of the systems.
+
+This is not a comprehensive listing of repository systems. Many institutions
+have implemented their own systems and other, non-insitute related systems
+exist as well. The benchmark solutions presented below have been chosen due to
+their wide adoption.
+
 \subsection{Harvard Dataverse}
 
 Harvard Dataverse is a Harvard University originated open source system
@@ -688,12 +697,56 @@ during the project it's being created.
 
 Invenio\footnote{\url{http://invenio.readthedocs.org/en/latest/}} is a CERN
 originated digital library management software. It started as the CERN
-documentation server, hosting over 1 000 000 bibliographic records.
+documentation server, hosting over 1 000 000 bibliographic records and is now
+available at the public domain\footnote{\url{https://github.com/inveniosoftware}}.
+Invenio installation was tried to get a better grasp of the system. Zenodo\footnote{\url{https://zenodo.org/}}
+is a CERN run public instance of Invenio with a thin UI layer on top. The EUDAT
+B2Share service\footnote{\url{https://b2share.eudat.eu/?ln=en}} also runs on
+Invenio.
+
+Invenio is built with Python and it implements similar features as the other
+systems discussed earlier in this section. Fulltext metadata search, uploads
+through an API and web UI and other repository features are present. Zenodo is
+integrated with GitHub and it gives the option to publish source code as a
+citeable scientific entity. Invenio itself has the capability to implement
+different persitent identifier methods - Zenodo has chosen to use DOI and
+EUDAT B2Share used Handle out of the box.
+
+Invenio is like Dataverse or Hydra - a tool to publish digital assets but not
+for managing data during research.
 
 \subsection{GitHub}
 
-\section{Work that is currently going on in Finland}
+GitHub\footnote{\url{https://github.com/}} has been mentioned a few times as
+the place where the source code of many of the projects mentioned here resides.
+It is a close analogue to sharing research, since it is a platform to share
+formatted information between collaborators and anyone who might be interested
+in the source code. Being a widely adopted platform it also contains, for
+example, lists to datasets\footnote{\url{https://github.com/caesar0301/awesome-public-datasets}}
+available around the globe as well as datastreams\footnote{\url{https://github.com/HazeWatchApp}}
+that you could use as a basis of applications serving greater public and good.
+The Zenodo connection also makes source code citeable.
+
+GitHub hosts, according to their own statistics as of writing of this thesis,
+30.1 million code repositories. While the main appeal of GitHub is to allow
+software to be written collaboratively (GitHub could be seen as the
+collaborative extension to Git\footnote{\url{https://git-scm.com/}}, the
+version control software. GitHub also hosts some data and vizualises that data.
+What really sets GitHub apart from the research data sharing platforms is the
+social aspects it contains. GitHub has powerful issue tracking systems,
+commenting capabilities and it promotes good coding style and contribution
+by rewarding the contributors with reckognition.
+
+GitHub is a Ruby on Rails application with Git and the required C daemons
+integrated to it.
+
+\section{Solutions in Finland}
 \label{sec:finland_current}
+
+In Sections \ref{sec:expert_interviews} - \ref{sec:csc} the current sitation
+in Finland was touched from different perspectives. The table below summarizes
+the learnings from different actors in Finland as well as some additional
+findings.
 
 Here we are going to paraphrase research and interesting things going on in
 Finland at the moment. Items to look into would be:
