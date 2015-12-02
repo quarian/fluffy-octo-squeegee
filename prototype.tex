@@ -1,18 +1,39 @@
 \chapter{Prototype Solution}
 \label{chapter:prototype}
 
-Many solutions to the reserch data repository problem of storing and sharing
-research data exist and for this thesis we decided to not reinvent the wheel.
-Instead, selected one of the systems and made a local installation for us and
-used it to test with the primary users of the system. The chosen system was
-Harvard Dataverse and primary users were the scientists that would be
-submitting data to the system. The testing of the prototype focused on
-publishing.
+In Section \ref{sec:benchmarking} existing solutions for the problems of
+publishing, sharing and managin research data were presented. It is clear that
+since these solutions exist, there is no point in reinventing the wheel and
+implement a new system. Instead we decided to implement a local installation
+of some of the systems presented in the benchmarking section. From the test
+installations we would choose the one that worked the best and use that to
+run tests on potential users of the system. This way we would get insights
+going forward on what the finalized system would look like. It's also notable
+that the existing solutions are remarkably similar, so using any one of them
+would give appliccable results.
+
+The prototype solution focuses on publishing and sharing of research data. The
+other option would have been to focus on the research data management during
+the research project, but research projects last longer than the span of this
+thesis and the results gained from that would likely be quite superficial.
+The lack of culture and practices are a factor for both publishing and
+and managing research data. The lacking of research data management culture is
+due to the lack of education and need for it, whereas publishing research data
+is a moderately new phenomenon. This makes it also a more interesting subject
+of study.
+
+We ended up choosing the Harvard Dataverse solution to be the prototype for our
+purposes. The follwing sections detail the rationale behind this choice, the
+technical details of the system and the tests that were conducted using the
+system along with the learnings.
 
 \section{Rationale behind selecting Dataverse}
 
-As a part of the benchamrking we tried making installations of a Hydra head,
-Zenodo instance and Harvard Dataverse.
+As a part of the benchmarking the existing solutions and in order to select the
+we right tool to run tests on users tried installations of a Hydra head, a
+Zenodo instance and a Harvard Dataverse instance. These three were chosen
+because they represent different technologies and are widely adopted as tools
+for publishing research data.
 
 \subsection{Hydra head installation}
 
@@ -237,3 +258,25 @@ might be blind to.
 
 \section{Outcomes of the prototype}
 \label{sec:prototype_outcomes}
+
+\begin{itemize}
+    \item The manual uploading process is just fine
+    \item It is a must that there is an API - for example, thousands of video
+          files will not be uploaded manually
+    \item It is important that the server can cache large files as a part of
+          the upload process
+    \item Search functionality
+        \begin{itemize}
+            \item Poorly described datasets
+            \item Not intuitive to find data from within all the search results
+            \item Dataset size is no available as a search filtering parameter
+            \item The vocabulary in advanced search is foreign for the users
+            \item The search results are not well organized
+        \end{itemize}
+    \item Access controls are important and function quite well
+    \item Peer to peer teaching would be good
+    \item How data is stored (folder structures and such) contains information
+          and that should be captured by the system
+    \item Accessing data from outside work computers would be nice
+    \item More to come here, have to dig up my notes
+\end{itemize}
