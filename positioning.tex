@@ -378,6 +378,10 @@ to the technical matters there is of course the fact that institutions, such as
 unversities, do not have a very well developed culture for research data
 management or publishing which also contributes to this.
 
+CSC also implements a service called AVAA\footnote{\url{http://avaa.tdata.fi/en/}},
+which contains spatial datasets such as open street maps for Finland and data from
+weather stations around Finland. It seems that it is not designed for all kinds
+of datasets or it has not been adopted for other uses.
 
 \iffalse
 CSC offers an interesting angle to the research data management problem. CSC
@@ -740,14 +744,69 @@ by rewarding the contributors with reckognition.
 GitHub is a Ruby on Rails application with Git and the required C daemons
 integrated to it.
 
+\clearpage
+
 \section{Solutions in Finland}
 \label{sec:finland_current}
 
 In Sections \ref{sec:expert_interviews} - \ref{sec:csc} the current sitation
-in Finland was touched from different perspectives. The table below summarizes
+in Finland was touched from different perspectives. The Table \ref{table:finland} below summarizes
 the learnings from different actors in Finland as well as some additional
 findings.
 
+\begin{table}[h]
+    \centering
+    \caption{Finnish actors and what they are working on}:
+    \label{table:finland}
+    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+      \hline
+      \textbf{Actor}                            & \textbf{Work currently underway} \\
+      \hline
+      \rowcolor{Gray}
+      Ministry of Education and Culture         & The Open Science and Research Initiative\footnotemark,
+                                                  which entails services for publishing research data and metadata (mentioned
+                                                  before in Section \ref{sec:csc}). They also
+                                                  organize training to facilitate open research and research data in Finnish
+                                                  institutions. The Initiative also runs the Tuuli project, that aims to
+                                                  help researchers to make data management plans that are required nowadays
+                                                  by funding bodies.\\
+      \hline
+      CSC                                       & As the national provider of scientific computing services CSC works with
+                                                  all the major Finnish institutions. It is also the implementing force in
+                                                  many of the Ministry level projects. CSC is also the the Finnish contact
+                                                  point to EUDAT, the European Union level research data services.\\
+      \hline
+      \rowcolor{Gray}
+      University of Helsinki                    & University of Helsinki has formulated its data policy\footnotemark and is working
+                                                  towards implementing the infrastructure required to support it.\footnotemark\\
+      \hline
+      No Place to Put Data                      & 264 \\
+      \hline
+      \rowcolor{Gray}
+      Lack of Standards                         & 222 \\
+      \hline
+      Sponsor does not Require                  & 196 \\
+      \hline
+      \rowcolor{Gray}
+      Do not Need Data                          & 169 \\
+      \hline
+      Other Reasons For Data Not Available      & 164 \\
+      \hline
+      \rowcolor{Gray}
+      Should not be Available                   & 162 \\
+      \hline
+    \end{tabularx}
+\end{table}
+
+% Hack to get the footnotes correct from the table previous
+\addtocounter{footnote}{-2}
+\footnotetext{\url{http://openscience.fi/frontpage}}
+\addtocounter{footnote}{1}
+\footnotetext{\url{https://www.helsinki.fi/sites/default/files/atoms/files/datapolicy\_final\_en.pdf}} 
+\addtocounter{footnote}{1}
+\footnotetext{M. Nurmela and V. Tenhunen, personal communication, November 9th, 2015}
+
+\iffalse
 Here we are going to paraphrase research and interesting things going on in
 Finland at the moment. Items to look into would be:
 
@@ -762,6 +821,7 @@ Finland at the moment. Items to look into would be:
 A question to ask Keijo later is that many of the people interviewed told about
 their upcoming research. Is it interesting here or should we stick to things
 that exist for sure?
+\fi
 
 \section{Outcomes of the positioning research}
 \label{sec:positioning_outcomes}
