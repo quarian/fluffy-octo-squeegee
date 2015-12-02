@@ -277,6 +277,12 @@ software used to create it outdated relatively soon? The work
 to figure out these things and the Finnish long term archival project is going
 on during the writing of this thesis.\footnote{M. Nurmela and E. Keskitalo, personal communication, August 21st, 2015}
 
+The universities already have datasets stored within their systems and one
+challenge would be to get these datasets public as well. Manual work on that
+would be futile, which is why a system that would extract the existing data
+from unversities' systems automatically would be useful.\footnote{M. Nurmela
+and J. Kesäniemi, personal communication, September 2nd, 2015}
+
 \iffalse
 Librarians are metadata experts. They are trained to describe scientific
 content, manage and sort that content and nowadays they also work with digital
@@ -752,59 +758,69 @@ integrated to it.
 In Sections \ref{sec:expert_interviews} - \ref{sec:csc} the current sitation
 in Finland was touched from different perspectives. The Table \ref{table:finland} below summarizes
 the learnings from different actors in Finland as well as some additional
-findings.
+findings. This list might not be copmrehensive but does contain the biggest
+insitutions. It's is likely that other insitutions and the insitutions listed
+below are working on more matters. All Finnish universities maintain a digital
+publishin archive for papers and theses published in those universities - they
+are not listed below.
 
-\begin{table}[h]
-    \centering
-    \caption{Finnish actors and what they are working on}:
-    \label{table:finland}
-    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
-      \hline
-      \textbf{Actor}                            & \textbf{Work currently underway} \\
-      \hline
-      \rowcolor{Gray}
-      Ministry of Education and Culture         & The Open Science and Research Initiative\footnotemark,
-                                                  which entails services for publishing research data and metadata (mentioned
-                                                  before in Section \ref{sec:csc}). They also
-                                                  organize training to facilitate open research and research data in Finnish
-                                                  institutions. The Initiative also runs the Tuuli project, that aims to
-                                                  help researchers to make data management plans that are required nowadays
-                                                  by funding bodies.\\
-      \hline
-      CSC                                       & As the national provider of scientific computing services CSC works with
-                                                  all the major Finnish institutions. It is also the implementing force in
-                                                  many of the Ministry level projects. CSC is also the the Finnish contact
-                                                  point to EUDAT, the European Union level research data services.\\
-      \hline
-      \rowcolor{Gray}
-      University of Helsinki                    & University of Helsinki has formulated its data policy\footnotemark and is working
-                                                  towards implementing the infrastructure required to support it.\footnotemark\\
-      \hline
-      No Place to Put Data                      & 264 \\
-      \hline
-      \rowcolor{Gray}
-      Lack of Standards                         & 222 \\
-      \hline
-      Sponsor does not Require                  & 196 \\
-      \hline
-      \rowcolor{Gray}
-      Do not Need Data                          & 169 \\
-      \hline
-      Other Reasons For Data Not Available      & 164 \\
-      \hline
-      \rowcolor{Gray}
-      Should not be Available                   & 162 \\
-      \hline
-    \end{tabularx}
-\end{table}
+\label{table:finland}
+\captionof{table}{Actors in Finland and their actions as of writing of this thesis}
+\begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+  \hline
+  \textbf{Actor}                            & \textbf{Work currently underway} \\
+  \hline
+  \rowcolor{Gray}
+  Ministry of Education and Culture         & The Open Science and Research Initiative\footnotemark,
+                                              which entails services for publishing research data and metadata (mentioned
+                                              before in Section \ref{sec:csc}). They also
+                                              organize training to facilitate open research and research data in Finnish
+                                              institutions. The Initiative also runs the Tuuli project, that aims to
+                                              help researchers to make data management plans that are required nowadays
+                                              by funding bodies.\\
+  \hline
+  CSC                                       & As the national provider of scientific computing services CSC works with
+                                              all the major Finnish institutions. It is also the implementing force in
+                                              many of the Ministry level projects. CSC is also the the Finnish contact
+                                              point to EUDAT, the European Union level research data services.\\
+  \hline
+  \rowcolor{Gray}
+  University of Helsinki                    & University of Helsinki has formulated its data policy\footnotemark~and
+                                              is working towards implementing the infrastructure required to support
+                                              it.\footnotemark\\
+  \hline
+  University of Jyväskylä                   & Unviersity of Jyväskylä has an own Dataverse instance and they are using
+                                              iRODS as their research data management tool. They are also developing a
+                                              desktop interface for iRODS to enable researcher collaboration.\\
+  \hline
+  \rowcolor{Gray}
+  University of Tampere                     & University of Tampere operates the Finnish Social Science Data
+                                              Archive\footnotemark, an resource center funded by the Ministry of
+                                              Culture and Education to store datasets from the field of social
+                                              science.\\
+  \hline
+  National Library of Finland               & The National Library manages the URN identifier scheme that can be
+                                              used to get persistent identifiers to datasets and other scientific
+                                              material in Finland. It's also involved in the long term storage
+                                              project (PAS). It aslo runs Finna\footnotemark, a digital archive for
+                                              Finnish museums, archives and libraries.\\
+  \hline
+  \rowcolor{Gray}
+  Aalto University                          & Aalto University is forming its research data policy. \\
+  \hline
+\end{tabularx}
 
 % Hack to get the footnotes correct from the table previous
-\addtocounter{footnote}{-2}
+\addtocounter{footnote}{-4}
 \footnotetext{\url{http://openscience.fi/frontpage}}
 \addtocounter{footnote}{1}
 \footnotetext{\url{https://www.helsinki.fi/sites/default/files/atoms/files/datapolicy\_final\_en.pdf}} 
 \addtocounter{footnote}{1}
 \footnotetext{M. Nurmela and V. Tenhunen, personal communication, November 9th, 2015}
+\addtocounter{footnote}{1}
+\footnotetext{\url{http://www.fsd.uta.fi/en/index.html}}
+\addtocounter{footnote}{1}
+\footnotetext{\url{https://www.finna.fi/}}
 
 \iffalse
 Here we are going to paraphrase research and interesting things going on in
@@ -826,8 +842,37 @@ that exist for sure?
 \section{Outcomes of the positioning research}
 \label{sec:positioning_outcomes}
 
-Here we will describe what we learned about the positioning of the work.
+It is clear that research data management and publishing is not just a
+techincal problem. Perfeclty fine techincal solution for publishing research
+data exist and solutions for managing research data exist. However, a system
+that would integrate these and make the whole lifecycle of research data -
+from creation to archiving - does noe exist. It seems that the challenge
+of managing and publishing research data brings together experts from
+multiple fields (researchers themselves, support staff in librarians and
+science IT and the managers who oversee these transaction to name a few) and
+this collaboration has not been figured out yet. Without proper techincal
+solutions there definitely can not be proper research data management, but
+maybe the bigger challenge is to get all these different stakeholders to
+actually do research data management. There is little culture or reward to
+going through the trouble of properly managing and publishing research data.
 
+It also seems that the problem should not be solved independently by all the
+institutions in Finland, let alone in the world. Succesful research data
+publishing solutions are open source software projects, that offer the base
+solution for free and the institutions can then become part of the developer
+community simultaneously improving the software and adapting it to their own
+needs. Similarly iRODS, the tool for managing resaerch data, is open source. In
+addition to using similar tools as their peers different insitutions should
+consider also forming their policies and research data management guidelines
+to be compatible. After all, one goal of sharing and publishing research data
+is to make collaboration easier and make science better.
+
+The insights gained from this positioning research and the learnings from
+the literature review in Section \ref{chapter:background} and the next Section
+\ref{chapter:prototype} will be discussed together in Sections
+\ref{chapter:discussion} and \ref{chapter:conclusions}.
+
+\iffalse
 First of all, it is clear that the research data management is not jut a
 technical problem. Perfectly fine technical solutions to the problems of
 publishing research data and managing your data in a safe way exist but the
@@ -846,3 +891,4 @@ all institutions in Finland would benefit from that. In addition this research
 will provide a road map style solution that would make use of existing know-how
 and work and serve as a possible proposal on how to bring research data
 management into all Finnish institutions that need that kind of service.
+\fi
