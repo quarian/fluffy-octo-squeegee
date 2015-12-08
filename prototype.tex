@@ -37,33 +37,40 @@ for publishing research data.
 
 \subsection{Hydra head installation}
 
-Setting up a Hydra head is fairly simple using Ruby Gems (citations to the
-installation instructions and Ruby website). Setting up the basic Hydra head
+Setting up a Hydra head is fairly simple using Ruby
+Gems\footnote{\url{https://github.com/projecthydra/hydra-head}}.
+Setting up the basic Hydra head
 does not get you far, however, since after setting up the installation you need
 to define your data model and almost everything else on your repository.
 
 This setup cost makes Hydra a very versatile framework. It's being used on many
 places beyond just research institutions, such as museums and image
-repositories (cite a website with a list of examples). Many of these systems
-are open source, build on the different branches of Hydra (another website has
-a listing of these). After trying two of these installations (names here, can't
-recall them now), but they were wither branded for their respective
-organizations or came with imperfect installation instructions.
+repositories\footnote{\url{https://wiki.duraspace.org/display/hydra/Partners+and+Implementations}}.
+Many of these systems are built on Hydra solution
+bundles\footnote{\url{https://wiki.duraspace.org/display/hydra/Hydra+Solution+Bundles}}
+which are also
+are open source. Installations of a clean Hydra head and the version
+run by Penn State University\footnote{\url{https://scholarsphere.psu.edu/}} were tried.
 
 The conclusion about Hydra heads was that while the system is modern and quite
 easy to install, the setup of the system made it too time consuming to setup a
 testing prototype in a reasonable time frame. The system is flexible and if you
 wanted to build your own customized repository solution Hydra would be suitable
-for that. Especially Blacklight, the frontend library used by the Hydra
+for that. The Penn State implementation was heavily branded and tweaked for
+their purposes, making it hard to make it work for ptototyping purposes.
+Blacklight\footnote{\url{http://projectblacklight.org/}},
+the frontend library used by the Hydra
 project, is quite good and makes for easy to use and efficient frontends.
 
 \subsection{Zenodo installation}
 
-We tried installing Zenodo syste locally from the source code (point tot the
-repository from here), but could not get the build process to work correclty.
+We tried installing Zenodo system locally from the source
+code\footnote{\url{https://github.com/zenodo/zenodo}}, but could not get the
+build process to work correclty as of writing of this thesis.
 It was later found out that the Zenodo system, which is built upon the Invenio
 archiving software, is notoriously hard to install according to the people who
-originally built it (cite the interview with Damien).
+originally built it\footnote{M. Nurmela and D. Lecarpentier, personal
+communication, September 30th, 2015}.
 
 Due to the problems with the installation we ruled the Zenodo system out at
 the prototyping phase.
@@ -71,10 +78,12 @@ the prototyping phase.
 \subsection{Harvard Dataverse}
 
 Harvard Dataverse was easy to install with the installation instructions as
-both a development version from the source code and a production version with
-the installation bundle (citations to the installation guides).
+both a development version from the source
+code\footnote{\url{http://guides.dataverse.org/en/latest/developers/index.html}} and a
+production version with
+the installation bundle\footnote{\url{http://guides.dataverse.org/en/latest/installatio/}}.
 
-The easy installation immediately gave a functioning softare repository to
+The easy installation immediately gave a functioning software repository to
 conduct tests with and that lead to the decision to use Dataverse as the
 prototype to test current data repository solutions and gain feedback to plan
 ahead.
@@ -84,14 +93,15 @@ ahead.
 Though implemented in different technologies, the functioning of the existing
 research data repository systems is quite similar. All of them offer form based
 dataset uploads, full text searches and some forms of access control. Many of
-them are even built on same technologies, such as Solr indexing software (cite
-a website describing what Solr is) or postgreSQL (cite to somewhere that tells
-what postgreSQL is).
+them are even built on same technologies, such as Solr indexing
+software\footnote{\url{http://lucene.apache.org/solr/}} or
+postgreSQL\footnote{\url{http://www.postgresql.org/}}.
 
 The similarity of the systems as well as the fact that there is no global
 consensus on what repository software is the best in business hints that you
-could use any one of them in your organization. The real question is how you
-get yout users to use the system and actually extract value out of it.
+could use any one of them in your organization. From this angle it also makes
+sense to use one of them to gain user insights and figure out how the systems
+should be developed in order to gain more users for them.
 
 \section{Users of the system}
 \label{sec:users}
