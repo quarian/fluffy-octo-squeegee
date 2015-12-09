@@ -81,7 +81,7 @@ Harvard Dataverse was easy to install with the installation instructions as
 both a development version from the source
 code\footnote{\url{http://guides.dataverse.org/en/latest/developers/index.html}} and a
 production version with
-the installation bundle\footnote{\url{http://guides.dataverse.org/en/latest/installatio/}}.
+the installation bundle\footnote{\url{http://guides.dataverse.org/en/latest/installation/}}.
 
 The easy installation immediately gave a functioning software repository to
 conduct tests with and that lead to the decision to use Dataverse as the
@@ -94,8 +94,8 @@ Though implemented in different technologies, the functioning of the existing
 research data repository systems is quite similar. All of them offer form based
 dataset uploads, full text searches and some forms of access control. Many of
 them are even built on same technologies, such as Solr indexing
-software\footnote{\url{http://lucene.apache.org/solr/}} or
-postgreSQL\footnote{\url{http://www.postgresql.org/}}.
+software\footnote{\label{solr}\url{http://lucene.apache.org/solr/}} or
+postgreSQL\footnote{\label{postgre}\url{http://www.postgresql.org/}}.
 
 The similarity of the systems as well as the fact that there is no global
 consensus on what repository software is the best in business hints that you
@@ -126,15 +126,99 @@ stories, which are presented in Appendix \ref{chapter:first-appendix}.
 \section{System description}
 \label{sec:system_description}
 
-There are two installations of the Harvard Dataverse - on development
-installation (from the source code) and one production version (from the
-installation package). The development installation is used to run observed
-user tests, explained in the next section (forward reference), whereas the
-production version is given out to selected pilot users to be used as a place
-to store their data.
+Harvard Dataverse is a Java application. Other technologies employed are Apache
+Solr\footnotemark[\getrefnumber{solr}] for indexing the database to facilitate search,
+postgreSQL\footnotemark[\getrefnumber{postgre}] for database
+and Glassfish or Apache for serving the
+webpages\footnote{\url{https://glassfish.java.net/}, \url{https://httpd.apache.org/}}.
+Dataverse also has in built support for the R statistical computing
+language\footnote{\url{https://www.r-project.org/}} for running simple
+statistical analyses on the data and for data visualization using the
+TwoRavens tool \cite{DBLP:conf/ht/HonakerD14}.
 
-TODO: Further description of the Havard Dataverse architecture and how they
-are run in the CSC cloud computing environment.
+The class model of
+Dataverse\footnote{\label{architecture}\url{https://github.com/IQSS/dataverse/tree/4.3/doc/Architecture}}
+is described in Figure \ref{fig:dataverse-model}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/dataverse-model}
+    \end{centering}
+    \caption[The Dataverse class model]{The Dataverse class model\footnotemark[\getrefnumber{architecture}]}
+    \label{fig:dataverse-model}
+\end{figure}
+
+In the heart of Dataverse is the division of content into Dataverses. The
+closest analogue to a Dataverse is a normal folder in a typical file system -
+Dataverses can contain other Dataverses, but in the place of files Datavereses
+contain Datasets. Datasets, in turn, contain the files that make up the
+dataset. The Dataverse split of the system also allows for fine grained access
+control, since Datavereses can be shared with no one, with single users or user
+groups.
+
+Users, other than the administrators of the Dataverse, can use the Dataverse
+with either the web user interface or the API offered by Dataverse. The
+dataflow of using the Dataverse application\footnotemark[\getrefnumber{architecture}] is shown in Figure
+\ref{fig:dataflow}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/dataflow}
+    \end{centering}
+    \caption[The Dataverse application dataflow]{The Dataverse application dataflow\footnotemark[\getrefnumber{architecture}]}
+    \label{fig:dataflow}
+\end{figure}
+
+The Dataverse Java application encompasses the Client Side and Dataverse
+Application in Figure \ref{fig:dataflow}. Ingest referers to uploading datasets
+to the system and the Index and Search and Data/Service components serve the
+user the desired content, be it search results or data to be downloaded. The
+rApache component handles the data visualization and runs the TwoRavens tool,
+and RServe is used for the statistical computation what the system does.
+
+Two versions of the Dataverse system were installed - one from source
+code\footnote{\url{https://github.com/quarian/dataverse}} and one from the
+installation bundle provided by the developers of
+Dataverse\footnote{\url{https://github.com/IQSS/dataverse/releases/tag/v4.2}}.
+The installations were run in the CSC cPouta
+environment\footnote{\url{https://research.csc.fi/cpouta}}, which is an
+OpenStack instance\footnote{\url{https://www.openstack.org/}}. The source code
+installation is referenced from now as the development installation since it
+was used to get a feel of the code and the system quality and with the access
+to the code if weird situations would come up they could be debugging easier.
+The installation from the installation bundle is referred to as the production
+installation, since it should be more stable than the branch of development
+code that was forked for the development installation. Figure
+\ref{fig:cpouta} shows the different installations in the cPouta environment.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/cpouta}
+    \end{centering}
+    \caption{The different installations in the cPouta environment}
+    \label{fig:cpouta}
+\end{figure}
+
+The development installation was installed on top of Ubuntu 14.04 and it
+worked, even though the installation instrcutions propose the use of Red Hat
+based systems. The TwoRavens application was omitted from the development
+installation, since the data visualization is not the core functionality of
+the reserach data repository software. The production installation was done
+on CentOS 6.6, which is a deriavative of Red Hat Linux. The installation was
+first tried on CentOS 7.0, but the differences between CentOS 6.x and 7.x made
+it so that the installation would not work.
+
+As for the information security of the prototype solution, the development
+installation was not set up with any firewall rules or other security, since
+its purpose was to get a feel of the system. For the production installation
+firewall rules were set using the security groups functions of OpenStack.
+When it comes to research data, security is important, and since the
+technologies such as Glassfish and postgreSQL are well known software and
+their default passwords and ports are well known setting up firewalls and
+chanfing those passwords is imperative. Additionally, with Dataverse,
+firewalling the port that Apache Solr uses is important, since it circumvents
+the user credentials and it could be used to retrieve any indexed information
+in the system.
 
 \section{System testing}
 \label{sec:system_testing}
