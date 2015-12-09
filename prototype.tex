@@ -269,8 +269,111 @@ management and publishing, how a research data publication system would fit
 this status and how well does the research data publication system fill its
 designated role.
 
-\section{Outcomes of the prototype}
+In addition the installation and maintenance of the prototype installations
+would give insight on how the system would be to maintain and how it would work
+from a technical point ov view.
+
+\section{Outcomes of the prototype and the tests}
 \label{sec:prototype_outcomes}
+
+The contextual interviews and lead user tests yielded results techical matters,
+user interface and experience matters and on the current status of the research
+data management and publishing.
+
+The results of the tests showed that the technical implementations for research
+data sharing fill their role. In the contextual interviews it was clear that
+the manual uploading and searching worked fine - the users were able to pick up
+the process of searching and uploading datasets. The upload process is form
+based, shown in Figure \ref{fig:upload} which is similar to just about any
+form based thing you can find onine. Files for datasets can be dragged and
+dropped to the user interface or the file browser of the computer and the users
+were able to find the suitable method for them. But even
+though the upload process is mechanically easy, the upload form contained part
+where the user was supposed to insert keywords of the dataset being uploaded.
+The keywords come with the concept of vocabulary - which was not known to the
+users, as shown in Figure \ref{fig:vocabulary}. In this context vocabulary
+refers to a set of words that have been agreed upon within a field of science
+in order to standardize communication within the field.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/upload}
+    \end{centering}
+    \caption{A screen capture of the dataset upload form}
+    \label{fig:upload}
+\end{figure}
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/vocabulary}
+    \end{centering}
+    \caption{A screen capture of the confusion induced vocabulary in the upload form}
+    \label{fig:vocabulary}
+\end{figure}
+
+What was lacking of the upload process was the extended metadata that would be
+important for the reuse of the data. The upload form contains the basic
+metadata that is required to make the dataset searchable. Additional metadata,
+such as details about the process of gathering the data, needs to be filled in
+after the initial upload. The upload form contains a reminder, pictured in
+Figure \ref{fig:hint}, to go add the metadata later. This approach has pros and
+cons, since it makes the uplaod process easier but makes the metadata likely
+lacking. Most users did not notice the hint to go add the metadata later and
+those who did notice it did not know where the metadata addition would be done.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/hint}
+    \end{centering}
+    \caption{A screen capture of the metadata reminder}
+    \label{fig:hint}
+\end{figure}
+
+The search functionality is placed front and center in the user interface of
+the Dataverse main page, as shown in Figure \ref{fig:search_main_page}. Users
+easily locate the search bar and are able to start searching for relevant
+datasets. The search results leave users lacking, however. This is not entirely
+the fault of the search system, since the users found the names and short
+descriptions of the datasets poor at describing the datasets which made
+finding relevant datasets hard. Using the advanced search, which all the users
+did not find, helped to narrow down the options, but the options in the
+advanced search were noted to miss details. Details the users were missing
+were dataset size and metadata related to their field. It was also clear that
+the system worked very well if you knew what you were looking for, for example
+a scenario where your fellow researcher would have shared the identifier of
+the dataset.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/search_main_page}
+    \end{centering}
+    \caption{A screen capture of the Harvard Dataverse main page}
+    \label{fig:search_main_page}
+\end{figure}
+
+The order in which the results were displayed was also unclear to the users.
+The search results page offers the chance to sort the results, but that option
+was missed by all users. The default setting is to sort the results by
+relevance, but it is uncelar to what relevance refers to in this context, since
+the default search searches all searchable fields in datasets, Dataverses and files.
+The fact that Dataverses, datasets and files are by default mixed in the search
+results also does not help in finding relevant datasets. There is the option to
+filter the files, datasets or Dataverses out of the search results, but the
+option was fairly commonly missed by the users. It might be due to the novelty
+of the terminology (Dataverse, especially, is a novel concept for the users).
+
+Dataverse implements helpful hovertexts on the terms, as shown in Figure
+\ref{fig:hovertext}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/hovertext}
+    \end{centering}
+    \caption{A screen capture of the hovertexts implemnted in Dataverse}
+    \label{fig:hovertext}
+\end{figure}
+
+
 
 \begin{itemize}
     \item The manual uploading process is just fine
