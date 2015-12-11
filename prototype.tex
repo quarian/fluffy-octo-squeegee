@@ -255,7 +255,8 @@ addition the interviewees were askes to use the actual Harvard
 Dataverse\footnote{\url{https://dataverse.harvard.edu/}} to find datasets
 relevant to their field of study and talk through the process. All these
 interactions were also observed to find out usability and other issues that
-might arise during these exchanges.
+might arise during these exchanges. In total 10 members of the Complex
+Networks group were involved in the contextual interviews.
 
 The lead users were granted access to the development Dataverse and were
 briefly instructed to the different functionalities of Dataverse. The
@@ -363,7 +364,10 @@ option was fairly commonly missed by the users. It might be due to the novelty
 of the terminology (Dataverse, especially, is a novel concept for the users).
 
 Dataverse implements helpful hovertexts on the terms, as shown in Figure
-\ref{fig:hovertext}.
+\ref{fig:hovertext}. This feature went unnoticed by all users at first, but
+most of them would find the feature by accident and find it helpful. It would
+help if the helpful hovertext would be indicated, for example, by a question
+mark symbol or something similar.
 
 \begin{figure}
     \begin{centering}
@@ -373,8 +377,144 @@ Dataverse implements helpful hovertexts on the terms, as shown in Figure
     \label{fig:hovertext}
 \end{figure}
 
+What was common in both the contextual interviews and the lead user tests was
+that the concept of publishing research data was novel for all the users. None
+of them had published their research data online and few had used datasets from others,
+but in those cases the datasets were always acquired by request and then
+delivered using existing systems, such as Google Drive or email. When 
+questioned on if they could make their research data public, for example with a tool
+like Dataverse, many expressed that their research data had some privacy
+concerns or other limitations to sharing or that it would take a considerable
+amount of time to apply relevant metadata to make the datasets presentable.
+Source code from some projects had been published in GitHub.
 
+The contextual interviews and the lead user tests also shed light on the
+current ways of managing research data. Network drives were used by the
+users and their research groups to share all the data within the group, but
+the there were no clear guidelines on how to describe dataset metadata or how
+to organize the file structure on the network drives, which meant that it was
+at times hard for the researchers to find relevant things from the drives and
+for the new members of the groups to get acquinted with the system. It turned
+out that currently research data management is not taught to the researchers,
+but knowledge is gathered from peers and mistakes you make on your previous
+projects.
 
+The research data visualization, which came up as an interesting feature to
+have in a reserach data publication platform during both the initial interviews
+and the contextual interviews is implemented in Dataverse. The user feedback
+on it, however, was that the visualization is very confusing and despite the
+users being well versed in statistical methods could not understand what the
+information displayed on the screen meant and how to get valuable infromation
+out of it. Figure \ref{fig:tworavens} shows a view of the visualization tool.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/tworavens}
+    \end{centering}
+    \caption{A screen capture of Data visualization implemented in Dataverse}
+    \label{fig:tworavens}
+\end{figure}
+
+The lead user tests mirrored the results from the contextual interviews when
+it came down to the manual uplaod process of the datasets. Despite the lack of
+previous knowledge on how to use the system or on how to publish research data
+the lead users were able to learn the system and upload their datasets. After
+working with the system for a longer time the need for computerized uploading
+process became clear. For example, the user from the Sound Group had hundreds
+of video files that could be uploaded to the publication system, but it would
+not make sense to spend the time to do that manually. In addition some of that
+data was being generated every day, so if that was to be published daily it
+would require an automared system. The Dataverse website offers a
+guide\footnote{\url{http://guides.dataverse.org/en/4.2/api/}} on how
+to use the API, but the users found that only the examples offered there were
+not enough to make the use of API easy.
+
+After using the system for a longer time the users noted that the system could
+help them access their datasets from outside the university's network. The
+network drives and similar approaches in used nowadays limit the access to
+the systems to the university network, which hinders both the ability of the
+researchers to work on it from different computers as well as the ability to
+share the information with collaborators from other places.
+
+The longer user period also brought up the fact that there is information in
+how people store their data. For example, the folder structure of the network
+drive might split files into subfolders by date of data collection. This serves
+as implicit metadata, since there is no metadata file that tells that this
+piece of data is from a certain date, but a human using the system would
+understand it. Dataverse offers a chance to upload .zip file to the system
+and this way preserving folder structures, but for example in the case of
+the Sound Group the video files are so large and there are so many of them
+that uploading a huge file would make the reuse of that file very hard.
+
+The installation and maintenance of the prototype Dataverse installation had
+both flaws and good things to it. The basic installation following the
+installation guide was easy, but adding in components like the TwoRavens or
+Shibboleth authentication system was documented less clearly to the point that
+it was not worth the effor to install the Shibboleth system for the prototype
+solution. The TwoRavens installation process seemed to work, but the system
+did not end up working in the prototype solution, so the TwoRavens was tested
+with the actual Harvard Dataverse.
+
+Codewise the Dataverse implementation is clean - it follows good object
+oriented programming practices of splitting functionality into different
+classes and implementing short, well named methods. Dataverse has unit
+tests implemented as well as a Jenkins
+environment\footnote{\url{https://build.hmdc.harvard.edu:8443/}} for automated
+integration tests. The test coverage is not very high - only
+5\%\footnote{\url{https://coveralls.io/github/IQSS/dataverse}}.
+
+User management with the Dataverse tools was easy. Dataverse offers a default
+set of roles that cover the needs of reserach data publication process well.
+Custom roles can also be made if the default ones are not enough. Figure
+\ref{fig:admin} shows the user management view of a single dataset. Permissions
+can be changed for individual or groups, allowing the administrator of the
+dataset to allow different parties to see the dataset before it's published.
+Publishing will make it visible for all, but managing the permissions before
+publishing the desired funtionality of private publishing could be achieved.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/admin}
+    \end{centering}
+    \caption{A screen capture of the dataset user management view}
+    \label{fig:admin}
+\end{figure}
+
+During the test on the development installation we came across an interesting
+situation when the partition where the database of the Dataverse became too
+full and no new datasets could be uploaded to the system. This did not crash
+the system - the Dataverse could still be accessed and datasets be downloaded,
+but new datasets could not be uploaded. Moving the database to a new partition
+did not alone solve the problem since the failed dataset uploads had left
+partial files to the Dataverse partition that prevented the Dataverse from
+caching the new uploads. Once the fragmented remains of the failed uploads
+were removed the and Dataverse had disk space to cache new datasets the system
+started working again normally. It is good that the system was robust enough
+to handle the insufficient space on the partition, but not cleaning up the
+failed uploads caused frustration and the Dataverse documentation did not
+help in resolving the issue.
+
+Interesting note on Dataverse is that it gives DOIs to the published datasets.
+This functionality is not documented, but digging into the code and the logs
+from the system it turns out that that Dataverse uses the
+EZID\footnote{\url{http://ezid.cdlib.org/}} service to supply DOIs for
+datasets. What is strange is that when you set up your own Dataverse you
+can just publish data and the DOIs will be given for you. This is strange
+because registering DOIs is not free and it's hard to imagine that Harvard
+would want to pay for all the DOIs for all the users of Dataverse.
+
+In summary, Dataverse serves as a functional system to publishing research
+data. The software is of good quality but the documentation and instructions
+related to setting up the system could be better and the test coverage could be
+improved. The mechanical processes of
+uploading and searching datasets from the system work, but both of them could
+be made more intuitive. Computerized upload of datasets is a must have feature
+when dealing with datasets that contain a large amount of files. In addition to
+taking care of these techincal matters training for reserach data management
+and integrationg of research data publishing to the workflow of scientists is
+required.
+
+\iffalse
 \begin{itemize}
     \item The manual uploading process is just fine
     \item It is a must that there is an API - for example, thousands of video
@@ -396,3 +536,5 @@ Dataverse implements helpful hovertexts on the terms, as shown in Figure
     \item Accessing data from outside work computers would be nice
     \item More to come here, have to dig up my notes
 \end{itemize}
+
+\fi
