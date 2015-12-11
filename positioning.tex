@@ -304,7 +304,7 @@ scientists?
 
 \fi
 
-\section{People organizing courses}
+\section{Course organizers}
 
 In addition to research, the mission of universities is to teach. With the
 world of science moving to the direction of more and more data intensive
@@ -354,7 +354,7 @@ currently in the university?
 
 \fi
 
-\section{CSC and national level things}
+\section{CSC}
 \label{sec:csc}
 
 CSC is the national computing service provider for Finnish institutions. They
@@ -584,8 +584,6 @@ have implemented their own systems and other, non-institute related systems
 exist as well. The benchmark solutions presented below have been chosen due to
 their wide adoption.
 
-\subsection{Harvard Dataverse}
-
 Harvard Dataverse is a Harvard University originated open source system
 for research data publication. This system was benchmarked by both reading the
 relevant documentation as well as making a local installation for testing
@@ -629,7 +627,43 @@ for managing research data during the research project, but it could be used
 even during that time to share research data with collaborators. It also does
 not offer long term archival options out of the box.
 
-\subsection{Hydra project}
+CKAN\footnote{\url{http://ckan.org/}} is an open source data portal software that aims to make data available
+over the Internet. CKAN instance was not installed for the purposes of this
+thesis, but a demo CKAN cite\footnote{\url{http://demo.ckan.org/}} was tested
+in addition to the documentation being read. CKAN is implemented in Python and
+it uses Apache Solr to to index a PostgreSQL database, much like Dataverse.
+
+CKAN offers full text search of dataset metadata and versioning of datasets.
+CKAN also allows for robust customization and data visualization as well as
+uploads through a web interface and an API. The access controls to the CKAN
+are coarse grained, public sharing of datasets or sharing withing an
+organization. CKAN is also promotes its extensibility, and indeed it has been
+adopted, for example, as the frontend of the CSC's
+services\footnote{\url{https://github.com/kata-csc}}. What separates CKAN from
+the other repository solutions is that it offers extensive geographic
+
+CKAN is designed for publishing and sharing data and not for managing data
+during the project it's being created.
+
+Invenio\footnote{\url{http://invenio.readthedocs.org/en/latest/}} is a CERN
+originated digital library management software. It started as the CERN
+documentation server, hosting over 1 000 000 bibliographic records and is now
+available at the public domain\footnote{\url{https://github.com/inveniosoftware}}.
+Invenio installation was tried to get a better grasp of the system. Zenodo\footnote{\url{https://zenodo.org/}}
+is a CERN run public instance of Invenio with a thin UI layer on top. The EUDAT
+B2Share service\footnote{\url{https://b2share.eudat.eu/?ln=en}} also runs on
+Invenio.
+
+Invenio is built with Python and it implements similar features as the other
+systems discussed earlier in this section. Fulltext metadata search, uploads
+through an API and web UI and other repository features are present. Zenodo is
+integrated with GitHub and it gives the option to publish source code as a
+citeable scientific entity. Invenio itself has the capability to implement
+different persistent identifier methods - Zenodo has chosen to use DOI and
+EUDAT B2Share used Handle out of the box.
+
+Invenio is like Dataverse - a tool to publish digital assets but not
+for managing data during research.
 
 The Hydra project is an open source digital repository solution. The Hydra
 solution was also tested during the writing of this thesis by installing and
@@ -656,8 +690,6 @@ institution. Some Hydra versions have dataset versioning implemented.
 
 Hydra project is aimed to archiving and publishing data. It is not designed as
 a tool for managing data during research projects.
-
-\subsection{iRODS}
 
 iRODS\footnote{\url{http://irods.org/}} is a data management software used by many research institutions to
 manage research data. It is open source and available on GitHub\footnote{\url{https://github.com/irods}}
@@ -686,50 +718,6 @@ The iRODS systems in Finland focus on enabling researcher collaboration, which
 is the role iRODS is primarily designed for. The iRODS architecture is not
 designed for sharing data, but could be used as a part of a system that shared
 data.
-
-\subsection{CKAN}
-
-CKAN\footnote{\url{http://ckan.org/}} is an open source data portal software that aims to make data available
-over the Internet. CKAN instance was not installed for the purposes of this
-thesis, but a demo CKAN cite\footnote{\url{http://demo.ckan.org/}} was tested
-in addition to the documentation being read. CKAN is implemented in Python and
-it uses Apache Solr to to index a PostgreSQL database, much like Dataverse.
-
-CKAN offers full text search of dataset metadata and versioning of datasets.
-CKAN also allows for robust customization and data visualization as well as
-uploads through a web interface and an API. The access controls to the CKAN
-are coarse grained, public sharing of datasets or sharing withing an
-organization. CKAN is also promotes its extensibility, and indeed it has been
-adopted, for example, as the frontend of the CSC's
-services\footnote{\url{https://github.com/kata-csc}}. What separates CKAN from
-the other repository solutions is that it offers extensive geographic
-
-CKAN is designed for publishing and sharing data and not for managing data
-during the project it's being created.
-
-\subsection{Invenio and Zenodo}
-
-Invenio\footnote{\url{http://invenio.readthedocs.org/en/latest/}} is a CERN
-originated digital library management software. It started as the CERN
-documentation server, hosting over 1 000 000 bibliographic records and is now
-available at the public domain\footnote{\url{https://github.com/inveniosoftware}}.
-Invenio installation was tried to get a better grasp of the system. Zenodo\footnote{\url{https://zenodo.org/}}
-is a CERN run public instance of Invenio with a thin UI layer on top. The EUDAT
-B2Share service\footnote{\url{https://b2share.eudat.eu/?ln=en}} also runs on
-Invenio.
-
-Invenio is built with Python and it implements similar features as the other
-systems discussed earlier in this section. Fulltext metadata search, uploads
-through an API and web UI and other repository features are present. Zenodo is
-integrated with GitHub and it gives the option to publish source code as a
-citeable scientific entity. Invenio itself has the capability to implement
-different persistent identifier methods - Zenodo has chosen to use DOI and
-EUDAT B2Share used Handle out of the box.
-
-Invenio is like Dataverse or Hydra - a tool to publish digital assets but not
-for managing data during research.
-
-\subsection{GitHub}
 
 GitHub\footnote{\url{https://github.com/}} has been mentioned a few times as
 the place where the source code of many of the projects mentioned here resides.
