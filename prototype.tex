@@ -2,7 +2,7 @@
 \label{chapter:prototype}
 
 In Section \ref{sec:benchmarking} existing solutions for the problems of
-publishing, sharing and managin research data were presented. It is clear that
+publishing, sharing and managing research data were presented. It is clear that
 since these solutions exist, there is no point in reinventing the wheel and
 implement a new system. Instead we decided to implement a local installation
 of some of the systems presented in the benchmarking section. From the test
@@ -10,7 +10,7 @@ installations we would choose the one that worked the best and use that to
 run tests on potential users of the system. This way we would get insights
 going forward on what the finalized system would look like. It's also notable
 that the existing solutions are remarkably similar, so using any one of them
-would give appliccable results.
+would give applicable results.
 
 The prototype solution focuses on publishing and sharing of research data. The
 other option would have been to focus on the research data management during
@@ -23,7 +23,7 @@ is a moderately new phenomenon. This makes it also a more interesting subject
 of study.
 
 We ended up choosing the Harvard Dataverse solution to be the prototype for our
-purposes. The follwing sections detail the rationale behind this choice, the
+purposes. The following sections detail the rationale behind this choice, the
 technical details of the system and the tests that were conducted using the
 system along with the learnings.
 
@@ -55,14 +55,14 @@ easy to install, the setup of the system made it too time consuming to setup a
 testing prototype in a reasonable time frame. The system is flexible and if you
 wanted to build your own customized repository solution Hydra would be suitable
 for that. The Penn State implementation was heavily branded and tweaked for
-their purposes, making it hard to make it work for ptototyping purposes.
+their purposes, making it hard to make it work for prototyping purposes.
 Blacklight\footnote{\url{http://projectblacklight.org/}},
 the frontend library used by the Hydra
 project, is quite good and makes for easy to use and efficient frontends.
 
 We tried installing Zenodo system locally from the source
 code\footnote{\url{https://github.com/zenodo/zenodo}}, but could not get the
-build process to work correclty as of writing of this thesis.
+build process to work correctly as of writing of this thesis.
 It was later found out that the Zenodo system, which is built upon the Invenio
 archiving software, is notoriously hard to install according to the people who
 originally built it\footnote{M. Nurmela and D. Lecarpentier, personal
@@ -122,7 +122,7 @@ Harvard Dataverse is a Java application. Other technologies employed are Apache
 Solr\footnotemark[\getrefnumber{solr}] for indexing the database to facilitate search,
 postgreSQL\footnotemark[\getrefnumber{postgre}] for database
 and Glassfish or Apache for serving the
-webpages\footnote{\url{https://glassfish.java.net/}, \url{https://httpd.apache.org/}}.
+web pages\footnote{\url{https://glassfish.java.net/}, \url{https://httpd.apache.org/}}.
 Dataverse also has in built support for the R statistical computing
 language\footnote{\url{https://www.r-project.org/}} for running simple
 statistical analyses on the data and for data visualization using the
@@ -142,10 +142,10 @@ is described in Figure \ref{fig:dataverse-model}.
 
 In the heart of Dataverse is the division of content into Dataverses. The
 closest analogue to a Dataverse is a normal folder in a typical file system -
-Dataverses can contain other Dataverses, but in the place of files Datavereses
-contain Datasets. Datasets, in turn, contain the files that make up the
+Dataverses can contain other Dataverses, but in the place of files Dataverses
+contain datasets. Datasets, in turn, contain the files that make up the
 dataset. The Dataverse split of the system also allows for fine grained access
-control, since Datavereses can be shared with no one, with single users or user
+control, since Dataverses can be shared with no one, with single users or user
 groups.
 
 Users, other than the administrators of the Dataverse, can use the Dataverse
@@ -162,7 +162,7 @@ dataflow of using the Dataverse application\footnotemark[\getrefnumber{architect
 \end{figure}
 
 The Dataverse Java application encompasses the Client Side and Dataverse
-Application in Figure \ref{fig:dataflow}. Ingest referers to uploading datasets
+Application in Figure \ref{fig:dataflow}. Ingest refers to uploading datasets
 to the system and the Index and Search and Data/Service components serve the
 user the desired content, be it search results or data to be downloaded. The
 rApache component handles the data visualization and runs the TwoRavens tool,
@@ -192,11 +192,11 @@ code that was forked for the development installation. Figure
 \end{figure}
 
 The development installation was installed on top of Ubuntu 14.04 and it
-worked, even though the installation instrcutions propose the use of Red Hat
+worked, even though the installation instructions propose the use of Red Hat
 based systems. The TwoRavens application was omitted from the development
 installation, since the data visualization is not the core functionality of
-the reserach data repository software. The production installation was done
-on CentOS 6.6, which is a deriavative of Red Hat Linux. The installation was
+the research data repository software. The production installation was done
+on CentOS 6.6, which is a derivative of Red Hat Linux. The installation was
 first tried on CentOS 7.0, but the differences between CentOS 6.x and 7.x made
 it so that the installation would not work.
 
@@ -207,7 +207,7 @@ firewall rules were set using the security groups functions of OpenStack.
 When it comes to research data, security is important, and since the
 technologies such as Glassfish and postgreSQL are well known software and
 their default passwords and ports are well known setting up firewalls and
-chanfing those passwords is imperative. Additionally, with Dataverse,
+changing those passwords is imperative. Additionally, with Dataverse,
 firewalling the port that Apache Solr uses is important, since it circumvents
 the user credentials and it could be used to retrieve any indexed information
 in the system.
@@ -222,9 +222,9 @@ no research data and without them using the research data repository there is
 no public research data. Section \ref{chapter:positioning} summarizes learnings
 from the other stakeholder groups. The section also contains results from
 surveys conducted on research data management and publishing to provide context
-also from the point of view of researcers.
+also from the point of view of researchers.
 
-To test this system we worked together with the Complex Newtorks
+To test this system we worked together with the Complex Networks
 Group\footnote{\url{http://becs.aalto.fi/en/research/complex\_networks/}} and the
 Speech Group\footnote{\url{http://research.ics.aalto.fi/speech/}} of Aalto
 University. Two kinds of tests were designed. The first test was a contextual
@@ -239,11 +239,11 @@ datasets to the Dataverse and fill in the appropriate metadata.
 The contextual interviews focused on the current methods of research data
 management and sharing. The users were asked to describe their practices and
 how they had come across to them (taught by the university, learned on their
-own or some other methods). When appliccable, the users were asked to show
+own or some other methods). When applicable, the users were asked to show
 their current setups for research data management and sharing. When the
 development Dataverse was used the users were asked to upload a test dataset
 to the Dataverse and walk the interviewer through the thought process. In
-addition the interviewees were askes to use the actual Harvard
+addition the interviewees were asked to use the actual Harvard
 Dataverse\footnote{\url{https://dataverse.harvard.edu/}} to find datasets
 relevant to their field of study and talk through the process. All these
 interactions were also observed to find out usability and other issues that
@@ -252,7 +252,7 @@ might arise during these exchanges.
 The lead users were granted access to the development Dataverse and were
 briefly instructed to the different functionalities of Dataverse. The
 instructions were left vague in order to make them read the relevant user
-guides and provide feedback on how easy the system was to use afer only very
+guides and provide feedback on how easy the system was to use after only very
 brief instructions. After roughly a month's time the lead users were debriefed
 and interviewed about their experiences with the Dataverse system.
 
@@ -263,12 +263,12 @@ designated role.
 
 In addition the installation and maintenance of the prototype installations
 would give insight on how the system would be to maintain and how it would work
-from a technical point ov view.
+from a technical point of view.
 
 \section{Outcomes of the prototype and the tests}
 \label{sec:prototype_outcomes}
 
-The contextual interviews and lead user tests yielded results techical matters,
+The contextual interviews and lead user tests yielded results technical matters,
 user interface and experience matters and on the current status of the research
 data management and publishing.
 
@@ -277,7 +277,7 @@ data sharing fill their role. In the contextual interviews it was clear that
 the manual uploading and searching worked fine - the users were able to pick up
 the process of searching and uploading datasets. The upload process is form
 based, shown in Figure \ref{fig:upload} which is similar to just about any
-form based thing you can find onine. Files for datasets can be dragged and
+form based thing you can find online. Files for datasets can be dragged and
 dropped to the user interface or the file browser of the computer and the users
 were able to find the suitable method for them. But even
 though the upload process is mechanically easy, the upload form contained part
@@ -309,7 +309,7 @@ metadata that is required to make the dataset searchable. Additional metadata,
 such as details about the process of gathering the data, needs to be filled in
 after the initial upload. The upload form contains a reminder, pictured in
 Figure \ref{fig:hint}, to go add the metadata later. This approach has pros and
-cons, since it makes the uplaod process easier but makes the metadata likely
+cons, since it makes the upload process easier but makes the metadata likely
 lacking. Most users did not notice the hint to go add the metadata later and
 those who did notice it did not know where the metadata addition would be done.
 
@@ -346,7 +346,7 @@ the dataset.
 The order in which the results were displayed was also unclear to the users.
 The search results page offers the chance to sort the results, but that option
 was missed by all users. The default setting is to sort the results by
-relevance, but it is uncelar to what relevance refers to in this context, since
+relevance, but it is unclear to what relevance refers to in this context, since
 the default search searches all searchable fields in datasets, Dataverses and files.
 The fact that Dataverses, datasets and files are by default mixed in the search
 results also does not help in finding relevant datasets. There is the option to
@@ -354,17 +354,17 @@ filter the files, datasets or Dataverses out of the search results, but the
 option was fairly commonly missed by the users. It might be due to the novelty
 of the terminology (Dataverse, especially, is a novel concept for the users).
 
-Dataverse implements helpful hovertexts on the terms, as shown in Figure
+Dataverse implements helpful hover texts on the terms, as shown in Figure
 \ref{fig:hovertext}. This feature went unnoticed by all users at first, but
 most of them would find the feature by accident and find it helpful. It would
-help if the helpful hovertext would be indicated, for example, by a question
+help if the helpful hover text would be indicated, for example, by a question
 mark symbol or something similar.
 
 \begin{figure}
     \begin{centering}
         \includegraphics[width=\textwidth]{images/hovertext}
     \end{centering}
-    \caption{A screen capture of the hovertexts implemnted in Dataverse}
+    \caption{A screen capture of the hover texts implemented in Dataverse}
     \label{fig:hovertext}
 \end{figure}
 
@@ -385,13 +385,13 @@ users and their research groups to share all the data within the group, but
 the there were no clear guidelines on how to describe dataset metadata or how
 to organize the file structure on the network drives, which meant that it was
 at times hard for the researchers to find relevant things from the drives and
-for the new members of the groups to get acquinted with the system. It turned
+for the new members of the groups to get acquainted with the system. It turned
 out that currently research data management is not taught to the researchers,
 but knowledge is gathered from peers and mistakes you make on your previous
 projects.
 
 The lead user tests mirrored the results from the contextual interviews when
-it came down to the manual uplaod process of the datasets. Despite the lack of
+it came down to the manual upload process of the datasets. Despite the lack of
 previous knowledge on how to use the system or on how to publish research data
 the lead users were able to learn the system and upload their datasets. After
 working with the system for a longer time the need for computerized uploading
