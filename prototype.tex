@@ -68,10 +68,10 @@ archiving software, is notoriously hard to install according to the people who
 originally built it\footnote{M. Nurmela and D. Lecarpentier, personal
 communication, September 30th, 2015}.
 
-Due to the problems with the installation we ruled the Zenodo system out at
+Due to the problems with the installation the Zenodo system was ruled out at
 the prototyping phase.
 
-Harvard Dataverse was easy to install with the installation instructions as
+Harvard Dataverse is easy to install with the installation instructions as
 both a development version from the source
 code\footnote{\url{http://guides.dataverse.org/en/latest/developers/index.html}} and a
 production version with
@@ -112,7 +112,7 @@ the following:
     \item Other interested parties
 \end{itemize}
 
-The requirements of these different stakeholders were boiled down to user
+The requirements of these different stakeholders are boiled down to user
 stories, which are presented in Appendix \ref{chapter:first-appendix}.
 
 \section{System description}
@@ -191,19 +191,20 @@ code that was forked for the development installation. Figure
     \label{fig:cpouta}
 \end{figure}
 
-The development installation was installed on top of Ubuntu 14.04 and it
-worked, even though the installation instructions propose the use of Red Hat
-based systems. The TwoRavens application was omitted from the development
+The development installation is installed on top of Ubuntu 14.04 and it
+works, even though the installation instructions propose the use of Red Hat
+based systems. The TwoRavens application is omitted from the development
 installation, since the data visualization is not the core functionality of
-the research data repository software. The production installation was done
+the research data repository software. The production installation is done
 on CentOS 6.6, which is a derivative of Red Hat Linux. The installation was
 first tried on CentOS 7.0, but the differences between CentOS 6.x and 7.x made
-it so that the installation would not work.
+it so that the installation would not work - CentOS 6.6 was settled to be the
+final environment of the development installation.
 
 As for the information security of the prototype solution, the development
-installation was not set up with any firewall rules or other security, since
-its purpose was to get a feel of the system. For the production installation
-firewall rules were set using the security groups functions of OpenStack.
+installation is not set up with any firewall rules or other security, since
+its purpose is to get a feel of the system. For the production installation
+firewall rules are set using the security groups functions of OpenStack.
 When it comes to research data, security is important, and since the
 technologies such as Glassfish and postgreSQL are well known software and
 their default passwords and ports are well known setting up firewalls and
@@ -216,7 +217,7 @@ in the system.
 \label{sec:system_testing}
 
 In order to extract value from the prototype Dataverse it needed to be tested
-with actual users. Of all the stakeholders presented in Section \ref{sec:users}
+with actual users. Of all the stakeholders groups presented in Section \ref{sec:users}
 the research scientists is the most important one, since without them there is
 no research data and without them using the research data repository there is
 no public research data. Section \ref{chapter:positioning} summarizes learnings
@@ -227,11 +228,11 @@ also from the point of view of researchers.
 To test this system we worked together with the Complex Networks
 Group\footnote{\url{http://becs.aalto.fi/en/research/complex\_networks/}} and the
 Speech Group\footnote{\url{http://research.ics.aalto.fi/speech/}} of Aalto
-University. Two kinds of tests were designed. The first test was a contextual
+University. Two kinds of tests were designed and implemented. The first test was a contextual
 interview - which means an interview and observation conducted in the user's normal working
 environment instead of lab. The contextual interviews were conducted both with
 the development installation of the Dataverse as a tool for discussion and as
-conversations about the current state of research data management and the
+conversations and observations about the current state of research data management and the
 current working practices. The second test was conducted with two lead users
 and the production Dataverse installation. The users were asked to input their
 datasets to the Dataverse and fill in the appropriate metadata.
@@ -277,8 +278,8 @@ The results of the tests showed that the technical implementations for research
 data sharing fill their role. In the contextual interviews it was clear that
 the manual uploading and searching worked fine - the users were able to pick up
 the process of searching and uploading datasets. The upload process is form
-based, shown in Figure \ref{fig:upload} which is similar to just about any
-form based thing you can find online. Files for datasets can be dragged and
+based, shown in Figure \ref{fig:upload} which is similar to many
+form based upload pages you can find online. Files for datasets can be dragged and
 dropped to the user interface or the file browser of the computer and the users
 were able to find the suitable method for them. But even
 though the upload process is mechanically easy, the upload form contained part
@@ -300,11 +301,11 @@ in order to standardize communication within the field.
     \begin{centering}
         \includegraphics[width=\textwidth]{images/vocabulary}
     \end{centering}
-    \caption{A screen capture of the confusion induced vocabulary in the upload form}
+    \caption{A screen capture of the confusion inducing vocabulary in the upload form}
     \label{fig:vocabulary}
 \end{figure}
 
-What was lacking of the upload process was the extended metadata that would be
+What is lacking of the upload process was the extended metadata that would be
 important for the reuse of the data. The upload form contains the basic
 metadata that is required to make the dataset searchable. Additional metadata,
 such as details about the process of gathering the data, needs to be filled in
@@ -354,6 +355,15 @@ results also does not help in finding relevant datasets. There is the option to
 filter the files, datasets or Dataverses out of the search results, but the
 option was fairly commonly missed by the users. It might be due to the novelty
 of the terminology (Dataverse, especially, is a novel concept for the users).
+An example of serch results is shown in  Figure \ref{fig:search_results}.
+
+\begin{figure}
+    \begin{centering}
+        \includegraphics[width=\textwidth]{images/search_results}
+    \end{centering}
+    \caption{A screen capture of an example search results page}
+    \label{fig:search_results}
+\end{figure}
 
 Dataverse implements helpful hover texts on the terms, as shown in Figure
 \ref{fig:hovertext}. This feature went unnoticed by all users at first, but
@@ -407,7 +417,6 @@ out of it. Figure \ref{fig:tworavens} shows a view of the visualization tool.
     \label{fig:tworavens}
 \end{figure}
 
-
 The lead user tests mirrored the results from the contextual interviews when
 it came down to the manual upload process of the datasets. Despite the lack of
 previous knowledge on how to use the system or on how to publish research data
@@ -427,7 +436,9 @@ help them access their datasets from outside the university's network. The
 network drives and similar approaches in used nowadays limit the access to
 the systems to the university network, which hinders both the ability of the
 researchers to work on it from different computers as well as the ability to
-share the information with collaborators from other places.
+share the information with collaborators from other places. There are, of
+course, ways to access data within the university network with VPN or other
+similar technologies, but that adds complexity and trouble to the process.
 
 The longer user period also brought up the fact that there is information in
 how people store their data. For example, the folder structure of the network
@@ -461,7 +472,7 @@ set of roles that cover the needs of research data publication process well.
 Custom roles can also be made if the default ones are not enough. Figure
 \ref{fig:admin} shows the user management view of a single dataset. Permissions
 can be changed for individual or groups, allowing the administrator of the
-dataset to allow different parties to see the dataset before it's published.
+dataset to allow different parties to see the dataset before it is published.
 Publishing will make it visible for all, but managing the permissions before
 publishing the desired functionality of private publishing could be achieved.
 
@@ -493,7 +504,7 @@ from the system it turns out that that Dataverse uses the
 EZID\footnote{\url{http://ezid.cdlib.org/}} service to supply DOIs for
 datasets. What is strange is that when you set up your own Dataverse you
 can just publish data and the DOIs will be given for you. This is strange
-because registering DOIs is not free and it's hard to imagine that Harvard
+because registering DOIs is not free and it is hard to imagine that Harvard
 would want to pay for all the DOIs for all the users of Dataverse.
 
 In summary, Dataverse serves as a functional system to publishing research
