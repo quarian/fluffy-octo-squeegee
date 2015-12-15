@@ -216,3 +216,39 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
     The system allows for downloadable citations to the dataset   &The system gives citations in common formats & Citing datasets is much easier when you can get citations right out of the system\\
     \hline
 \end{tabularx}
+
+\pagebreak
+
+\section{Functional requirements for research data management}
+
+\tabcolsep=0.11cm
+\begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Metric}& \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    Research data management tool must not interfere with the research work    &Research data management must not take more than 5\% of researcher’s time & If the tool causes problems it is not going to be used\\
+    \hline
+    Publishing data from the research data management tool should be easy&It should take fewer than 5 interactions with the system to publish a dataset from the research data management tool &There is no point in separating the systems and making publishing easy it makes publishing more likely\\
+    \hline
+    \rowcolor{Gray}
+    The tool must be able to store metadata in addition to storing the actual data  &The metadata in the system should follow the metadata standards of the publishing platform&Data without metadata is incomplete and making metadata a part of the research data management tool would promote metadata even during the research process\\
+    \hline
+    The tool should have a graphical user interface  &There is a graphical user interface to the system that is available through the Internet & Not all researchers like a command line interface\\
+    \hline
+    \rowcolor{Gray}
+    The tool should have a command line interface        &There is a command line interface to the system that can be accessed for example with SSH & Not all researchers like graphical user interfaces\\
+    \hline
+    The tool should be integrable to data collection devices  & Once integrated, the users don’t need to manually do anything to upload the raw data to the system & The more computerized the research process is the better it is for the researchers\\
+    \hline
+    \rowcolor{Gray}
+    The system can be integrated to research workflow systems   &The system offers APIs to integrate it to existing workflow systems& Some research projects have research workflows that automate the research process and that should be accommodated\\
+    \hline
+    The system allows for comments on shared files &The system has a commenting function for the objects in the system & Comments help with collaboration on the files\\
+    \hline
+    \rowcolor{Gray}
+    The system uses the existing user management system &The system integrates to the existing user management system of the institution &We don’t want to add more user accounts or points of confusion to the user\\
+    \hline
+    The research data should be accessible from anywhere  &The system does not filter traffic based on an IP address range, but the system should use the user management system to authenticate users  & Researchers might want to work from home, for example\\
+    \hline
+\end{tabularx}
