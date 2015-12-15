@@ -170,7 +170,7 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
 \chapter{Requirements for research data management and publishing system}
 \label{chapter:reqs}
 
-\section{Functional requirements for research data publishing}
+\section{Functional Requirements for Research Data Publishing}
 
 \tabcolsep=0.11cm
 \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
@@ -219,7 +219,7 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
 
 \pagebreak
 
-\section{Functional requirements for research data management}
+\section{Functional Requirements for Research Data Management}
 
 \tabcolsep=0.11cm
 \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
@@ -250,5 +250,24 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
     The system uses the existing user management system &The system integrates to the existing user management system of the institution &We don’t want to add more user accounts or points of confusion to the user\\
     \hline
     The research data should be accessible from anywhere  &The system does not filter traffic based on an IP address range, but the system should use the user management system to authenticate users  & Researchers might want to work from home, for example\\
+    \hline
+\end{tabularx}
+
+\section{Hardware Requirements}
+
+\tabcolsep=0.11cm
+\begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Metric}& \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    Data is stored within the legal geographical limits &The hardware of the system is located such that the legal constraints are satisfied (for example, in the case of Finland the hardware is in Finland) & Some data cannot leave borders of countries\\
+    \hline
+    The data must be backed up for disaster recovery&The data storage is designed following good standards and principles &The research data is sensitive and should be backed up in case of failures – full back up on tapes is not feasible, but good enough replication is required\\
+    \hline
+    \rowcolor{Gray}
+    The hardware must adhere to the safety requirements of the data &The hardware conforms to the safety standards of the data&Some data must be safer than other data – however, the most extreme cases should be handled separately\\
+    \hline
+    The hardware should be virtualized by the software on top of it &The hardware can be changed and the system on top of it does not need to be changed & The research data lifespan is likely to outlive several compute and storage hardware generations and hardware will always eventually fail\\
     \hline
 \end{tabularx}
