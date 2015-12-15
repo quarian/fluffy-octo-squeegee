@@ -1,6 +1,8 @@
 \chapter{Users of Data Repositories}
 \label{chapter:first-appendix}
 
+\footnotesize
+
 \section{Research scientist}
 
 \begin{compactitem}
@@ -167,3 +169,50 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
 
 \chapter{Requirements for research data management and publishing system}
 \label{chapter:reqs}
+
+\section{Functional requirements for research data publishing}
+
+\tabcolsep=0.11cm
+\begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Metric}& \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    The publishing platform can host and serve big files    &The file maximum size is in the order of tens of gigabytes & The platform does not need to serve big data, but even ''normal'' data can be gigabytes in size\\
+    \hline
+    Users can sort the search results by different factors &The search results can be sorted by various sorting criteria, e.g. dataset publication date, dataset language, dataset creation date & If the repository contains many datasets, searching for relevant ones needs to be made easier\\
+    \hline
+    \rowcolor{Gray}
+    The metadata templates offered by the system satisfy the needs of different fields of science    &The metadata templates follow the existing metadata standards or best practices & Metadata should be descriptive of the data and understandable by others than the creators of the data\\
+    \hline
+    Data can be uploaded programmatically  &The platform offers and API with associated documentation  & If you possess a lot of data, you cannot upload it all manually\\
+    \hline
+    \rowcolor{Gray}
+    Data can in the system can be visualized        &Data visualization follows the best practices of the field  & Good visualizations give an easy overview to the data\\
+    \hline
+    Access control to datasets should be fine grained  & Access to the datasets can be controlled by e.g. user account, groups of users, IP address range or embargoes & Sometimes you need the data to be only visible to a subset or there might be an embargo on the data – for example, students of Aalto University should see a certain dataset but not everyone in the world\\
+    \hline
+    \rowcolor{Gray}
+    The data repository must be secure   &The data repository satisfies industry standard requirements for security& The data repository may contain confidential information which should be safe\\
+    \hline
+    Users in the system can be given different roles &The different roles are e.g. administrator, curator, contributor and guest & Publishing research data involves many parties, such as librarians and IT staff, and their roles are not about creating data but manage the system and curate the data\\
+    \hline
+    \rowcolor{Gray}
+    The system should be integrated to the already existing user management system   &The system’s user management module is extensible to integrate external user management system & Not only do new students come in every year, staff changes all the time – and keeping multiple systems up to date is a cause for problems\\
+    \hline
+    Unknown vocabulary should be made clear to the users  &When encountered with unknown vocabulary, the user must get help within the same screen  & Research data has a lot of vocabulary that is not all known for researchers – helping them to understand that is important\\
+    \hline
+    \rowcolor{Gray}
+    Users can add tags to their datasets and files        &Tags can be added to both datasets and files & Tags allow the system to group similar datasets and files to help find relevant ones\\
+    \hline
+    Users can to filter search results & The filtering can be done by e.g. field of science, dataset size or creator of the data& If the repository contains many datasets, finding the relevant ones is easier from filtered results\\
+    \hline
+    \rowcolor{Gray}
+    The system can be integrable with systems for long term archival of selected important datasets  &Selected research datasets can be stored for over 20 years in a long term archival system& Long term archival allows for the persistence of science and continued use of the datasets\\
+    \hline
+    The system enables different versions of the dataset &The system can store and display different versions of the dataset & Datasets can be worked on and changed, but the old versions should be available since someone might use the older versions of the data\\
+    \hline
+    \rowcolor{Gray}
+    The system allows for downloadable citations to the dataset   &The system gives citations in common formats & Citing datasets is much easier when you can get citations right out of the system\\
+    \hline
+\end{tabularx}
