@@ -28,6 +28,58 @@ data management during a research project. The Table
     \hline
 \end{tabularx}
 
+In Tables \ref{table:solutions} and \ref{table:management} the IDA, Etsin, Avaa and PAS are a part of the
+Finnish Open Science Initiative. Dataverse, Hydra, Zenodo, iRODS and CKAN are
+open source solutions. EUDAT refers to the B2-offering\footnote{\url{http://eudat.eu/}},
+of which the B2Share and B2Drop are considered to be a part of a reserch
+data management and publication process. ACRIS is the Elsevier Pure instance
+that is being trialed at Aalto University. GitHub is included in the
+comparasion since it is a widely adopted tool for publishing and collaborating
+on software projects.
+
+The features used in the columns in Table \ref{table:solutions} are explained
+below in Table \ref{table:solution_features}:
+
+
+\label{table:solution_features}
+\captionof{table}{The features being compared on Table \ref{table:solutions}}
+    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Feature} & \textbf{Explanation} \\
+    \hline
+    Data Storage    & Data storage means that the solution offers the chance to
+                      save the actual research data to the system and not just links
+                      to the datasets, for example\\
+    \hline
+    Metadata Storage &  Metadata storage means that the system has a structured way
+                        of storing metadata anout datasets - this does not mean that
+                        the system should contain actual research data, since some services
+                        are built just as places to store metadata and point to datasets\\
+    \hline
+    Open Access Data    & System that implements this feature allows the datasets to be searched
+                          and downloaded by the general public without restrictions to the use
+                          of the datasets\\
+    \hline
+    Restricted Data    & Whereas open access data is available for all the world to see, systems
+                         that implement the restriced data feature allow for a more fine grained
+                         user management allowing datasets to be shared for restricted groups
+                         of users\\
+    \hline
+    Long Term Archival    & Long term archival is archival for datasets that lasts for tens of years -
+                            a lot longer than commodity hard drives last in active use (commodity
+                            hard drives usually last from three to five years in active use)\\
+    \hline
+    Full Text Search    & Full text search refers to the ability to search the all the metadata
+                          available in the system to find relevant datasets\\
+    \hline
+    Dataset Versionig    & Dataset versioning means that the system allows for uploading newer versions
+                           of the already uploaded datasets without deleting the old datasets, since
+                           someone might use and refer to the old datasets\\
+    \hline
+    Identifier Scheme    & Identifier scheme tells which, if any, persistent identifier schemese the
+                           solution implements\\
+    \hline
+\end{tabularx}
 
 Notable in the table is that the existing solutions to research data publishing
 do not take into account the long term storage of research data. The one
@@ -65,7 +117,7 @@ adoption a well known identifier scheme should be used.
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}Zenodo   && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}DOI \\
             \cline{3-10}\cline{1-1}
-            \cellcolor{first-column-blue}Eudat    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}Handle \\
+            \cellcolor{first-column-blue}EUDAT    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}Handle \\
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}iRODS    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{red}-  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}- \\
             \cline{3-10}\cline{1-1}
@@ -118,7 +170,7 @@ of research data management during the research process.
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}Zenodo      && \cellcolor{green}++ & \cellcolor{red}- & \cellcolor{red}- & \cellcolor{yellow}+  & \cellcolor{green}++  &  \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{red}- \\
             \cline{3-10}\cline{1-1}
-            \cellcolor{first-column-blue}Eudat       && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}- & \cellcolor{yellow}+  & \cellcolor{green}++  &  \cellcolor{green}++ & \cellcolor{green}++  & \cellcolor{red}- \\
+            \cellcolor{first-column-blue}EUDAT       && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}- & \cellcolor{yellow}+  & \cellcolor{green}++  &  \cellcolor{green}++ & \cellcolor{green}++  & \cellcolor{red}- \\
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}iRODS       && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{yellow}+  & \cellcolor{green}++  &  \cellcolor{green}++ & \cellcolor{green}++  & \cellcolor{green}++ \\
             \cline{3-10}\cline{1-1}
