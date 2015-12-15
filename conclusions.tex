@@ -49,6 +49,7 @@ below in Table \ref{table:solution_features}:
     \hline
     \textbf{Feature} & \textbf{Explanation} \\
     \hline
+    \rowcolor{Gray}
     Data Storage    & Data storage means that the solution offers the chance to
                       save the actual research data to the system and not just links
                       to the datasets, for example\\
@@ -58,6 +59,7 @@ below in Table \ref{table:solution_features}:
                         the system should contain actual research data, since some services
                         are built just as places to store metadata and point to datasets\\
     \hline
+    \rowcolor{Gray}
     Open Access Data    & System that implements this feature allows the datasets to be searched
                           and downloaded by the general public without restrictions to the use
                           of the datasets\\
@@ -67,6 +69,7 @@ below in Table \ref{table:solution_features}:
                          user management allowing datasets to be shared for restricted groups
                          of users\\
     \hline
+    \rowcolor{Gray}
     Long Term Archival    & Long term archival is archival for datasets that lasts for tens of years -
                             a lot longer than commodity hard drives last in active use (commodity
                             hard drives usually last from three to five years in active use)\\
@@ -74,6 +77,7 @@ below in Table \ref{table:solution_features}:
     Full Text Search    & Full text search refers to the ability to search the all the metadata
                           available in the system to find relevant datasets\\
     \hline
+    \rowcolor{Gray}
     Dataset Versionig    & Dataset versioning means that the system allows for uploading newer versions
                            of the already uploaded datasets without deleting the old datasets, since
                            someone might use and refer to the old datasets\\
@@ -171,6 +175,8 @@ that would include a concious effort from the university side.
     }
 \end{sidewaystable}
 
+\clearpage
+
 \iffalse
 \begin{sidewaysfigure}
     \begin{centering}
@@ -184,7 +190,51 @@ that would include a concious effort from the university side.
 Research data publishing is the end goal of research data management, and
 Table \ref{table:management} shows the same tools compared previously in
 the contex of research data publishing tbeing compared in the light
-of research data management during the research process.
+of research data management during the research process. Table
+\ref{table:management_features} explains the features that were
+explored from the research data management angle.
+
+\label{table:management_features}
+\captionof{table}{The features being compared on Table \ref{table:management}}
+    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Feature} & \textbf{Explanation} \\
+    \hline
+    \rowcolor{Gray}
+    File Sharing With Partners    & The basis of collaboration is sharing results and in this
+                                    context it means that the solution enables files to be
+                                    shared using the system - this also implies that the files
+                                    can be stored there for personal use\\
+    \hline
+    File Editing With Partners & For collaboration just sharing files might not be enough, and
+                                 the files should be able to be edited instead of always uploading
+                                 new versions to the system\\
+    \hline
+    \rowcolor{Gray}
+    Workflow Sharing    &  The research workflows in some fields of science are highly automated
+                           and sharing those would save a lot of time for collaborators and the person
+                           sharing them assuming he or she had to return to that workflow later\\
+    \hline
+    Comments On Files    & Commenting on others' work makes collaboration easier\\
+    \hline
+    \rowcolor{Gray}
+    Web Interface          & A system implements this feature if it has an interface online that
+                             can be accessed from anywhere so that the research data is readily
+                             accessible\\
+    \hline
+    Command Line Interface    & A system implements a command line interface if the users can access
+                                their research data using technologies like SSH\\
+    \hline
+    \rowcolor{Gray}
+    Desktop Interface       & A system implements a desktop interface if it offers software that the
+                              users can install on their personal machines or it integrates to the
+                              file system on the user's machine\\
+    \hline
+    Integrated Data Colleciton    & Integrated data collection means that tools that collect research
+                                    data can be integrated to the solution such that the research data
+                                    is collected and put into the systems automatically\\
+    \hline
+\end{tabularx}
 
 The same tools that are suitable for research data publishing are not
 necessarily right for research data management and vice versa. iRODS, IDA
@@ -194,7 +244,10 @@ collaborative tool for projects around programming.
 
 The tools that work well for reserach data publishing lack many important
 features that research data management and research collaboration, such
-as file editing and proper commenting functionality on file.
+as file editing and proper commenting functionality on file. Research workflows
+cannot be stored or shared with any of the tools, which is not surprising - the
+definition of a workflow varies a lot between disciplines and it is not a
+requirement for many.
 
 The user tests and interviews also show that the research management ways
 of researchers could be much better. Research data management is learned
@@ -262,18 +315,61 @@ infrastructure also affects the training and knowledge of research data
 management and tools in the sense that if there is no infrastructure to
 leverage there is no way to teach institutional best practices.
 
+\clearpage
 
 This thesis has also identified many aspects of a solution that could solve the
-research data management and sharing problem. These requirements are split
-into functional, hardware and experiental requirements and are shown below
-in Tables (TODO: put tables here). The presented requirements could be used
-to design a research data management and publishing solution as well as to
-validate an existing solution.
+research data management and sharing problems. These requiremens are split into
+must have requirements, functional requirements, hardware requirements and
+user experience requirements. Other than the must have requirements that a
+system either does or does not fulfill the requirements contain metrics that
+can be used to validate if the system fulfills the requirement. The
+requirements presented here are formed to be quite general,
+which means that in order to use them to design a solution the metrics
+presented in the requirements should be made more specific. The requirements
+are also not instructions set in stone - they should be used to guide in
+developing a research data management and publishing system.
 
-(REQUIREMENT TABLES HERE)
+The must have -requirements are presented in Tables \ref{table:must_have_publishing} and
+\ref{table:must_have_management}. The other requirements are presented in Appendix
+\ref{chapter:reqs}.
 
-Technical solutions alone are not enough to make research data management
-and publishing a reality. The culture about open research data has to be
-changed so that it is natural and rewarding for people to publish and take
-good care of their research data. This requires training, commitment from
-research institutions and people to advocate for the cause.
+\label{table:must_have_publishing}
+\captionof{table}{Must have requirements for a research data publishing solution}
+    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    Users can upload datasets    & Without datasets, there is not research data publishing\\
+    \hline
+    User can upload relevant metadata for their datasets & Without metadata, finding and reusing research data is impossible\\
+    \hline
+    \rowcolor{Gray}
+    The metadata of datasets is full text searchable    &  In order to find datasets, the metadata has to be searchable\\
+    \hline
+    Published datasets are assigned a persistent identifiers    & Persistent identifiers allow for referencing the data and maintaining links for longer\\
+    \hline
+    \rowcolor{Gray}
+    There are no restrictions to the type of uploaded data          & Research data comes in many shapes and forms and all data must be able to be published\\
+    \hline
+    The datasets in the system can be made public for all the world to see    & The goal of the publishing platform is to make the data public\\
+    \hline
+\end{tabularx}
+
+\pagebreak
+
+\label{table:must_have_management}
+\captionof{table}{The must have requirements of a research data management solution}
+    \begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    Users can upload their research data during the research project    & Instead of per researcher storage solution for storing research data, there must be a centralized solution\\
+    \hline
+    The tool imposes no restrictions to the type of research data stored & Research data comes in all shapes and forms and the tool must serve all the disciplines\\
+    \hline
+    \rowcolor{Gray}
+    The research data management tool must allow for sharing data with collaborators    &  Research is done globally and collaboratively nowadays, meaning that data must be shared with collaborators\\
+    \hline
+\end{tabularx}
