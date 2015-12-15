@@ -3,7 +3,7 @@
 
 This thesis has examined different technical solutions to managing, sharing and
 publishing research data, focusing on sharing and publishing. The Table
-\ref{fig:solutions} shows the different technical solutions and how they
+\ref{table:solutions} shows the different technical solutions and how they
 differ in terms of features in the context of research data publishing.
 
 TODO: add here explanations on what the different columns mean
@@ -21,6 +21,45 @@ The identifier scheme is also a point of interest. Citing datasets is something
 that has not been widely adopted, which means that in order to help that
 adoption a well known identifier scheme should be used.
 
+\begin{sidewaystable}
+    \caption{Existing solutions in light of research data publishing}
+    \label{table:solutions}
+    \resizebox{\textwidth}{!}{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
+        \hline
+        \rowcolor{top-level-blue}
+        Tool & Data Storage & Metadata Storage & Open Access Data & Restricted Data & Long Term Archival & Full Text Search & Dataset Versioning & Identifier Scheme \\
+        \hline
+        IDA         & ++ & ++ & +  & +  & -  &  ++ & -  & URN \\
+        \hline
+        Etsin       & -  & ++ & -  & -  & -  &  ++ & -  & URN \\
+        \hline
+        Avaa        & ++ & ++ & ++ & -  & -  &  ++ & -  & URN \\
+        \hline
+        Dataverse   & ++ & ++ & -  & ++ & -  &  ++ & +  & DOI/Handle \\
+        \hline
+        Hydra       & ++ & ++ & ++ & ++ & -  &  ++ & +  & DOI \\
+        \hline
+        Zenodo      & ++ & ++ & ++ & +  & -  &  ++ & +  & DOI \\
+        \hline
+        Eudat       & ++ & ++ & ++ & +  & -  &  ++ & +  & Handle \\
+        \hline
+        iRODS       & ++ & ++ & -  & -  & -  &  ++ & +  & - \\
+        \hline
+        CKAN        & ++ & ++ & ++ & ++ & -  &  ++ & +  & + \\
+        \hline
+        ACRIS       & -  & +  & +  & +  & -  &  ++ & -  & + \\
+        \hline
+        PAS         & ++ & ++ & ++ & -  & ++ &  ++ & -  & URN \\
+        \hline
+        GitHub      & ++ & +  & ++ & ++ & -  &  ++ & ++ & DOI \\
+        \hline
+    \end{tabular}
+    }
+\end{sidewaystable}
+
+\iffalse
 \begin{sidewaysfigure}
     \begin{centering}
         \includegraphics[width=\textwidth]{images/publishing}
@@ -28,6 +67,7 @@ adoption a well known identifier scheme should be used.
     \caption{A placeholder for the latex table}
     \label{fig:solutions}
 \end{sidewaysfigure}
+\fi
 
 Research data publishing is the end goal of research data management, and
 Table \ref{fig:management} shows the same tools being compared in the light
