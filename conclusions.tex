@@ -8,7 +8,9 @@ how they differ in the context of research data publishing, whereas Table
 \ref{table:management} shows the same solutions but in the context of research
 data management during a research project. The Table
 \ref{table:legend_colors} shows the legend that is used in Tables
-\ref{table:solutions} and \ref{table:management}.
+\ref{table:solutions} and \ref{table:management}. Later in this section the
+proposed requirements for a succescull research data management solution
+are presented.
 
 \label{table:legend_colors}
 \captionof{table}{The color coding of the summary Tables \ref{table:solutions} and \ref{table:management}}
@@ -81,18 +83,54 @@ below in Table \ref{table:solution_features}:
     \hline
 \end{tabularx}
 
-Notable in the table is that the existing solutions to research data publishing
-do not take into account the long term storage of research data. The one
-solution that does that, PAS, only focuses on that making it imperative that
-the systems that are used to publish the research data should be integrated to
-a system that provides long term archival as well. The open source tools offer
-a notably similar set of features and any one of them could be taken into use
-and it would serve as a serviceable technical platform for research data
-publishing.
+From the solutions presented in Table \ref{table:solutions} the systems that
+are designed primarily for research data publishing (Avaa, Dataverse, Hydra,
+Zenodo, and CKAN) have almost all the features specified here. What some of
+them are lacking is the ability to restrict access to the research data, which
+is a requirement for some datasets that contain data that has some
+confidentiality clauses. Avaa, for example, is a platform for nothing else than
+completely open data making it an awkward choise for a university, for example.
+None of these solutions implement long term archival,
+which is an important feature going forward and a goal for future development.
+These solutions are also remakrably similar, so any one of them could be used
+to set up a research data publishing platform for a research institution.
+
+The only solution for long term archival is PAS, which is in test phase as of
+writing of this thesis. It ticks many boxes of the features, but it has to be
+taken into accoung that the PAS system is only for long term archival and
+can not be used for the normal publishing activity of research institutions.
+It is also unclear at the moment how datasets for long term archival are
+chosen, what kind of metadata long term archival requires and how the system
+should integrate to existing and upcoming research data repositories.
+
+The tools that have a lot of other functionality in addition to research data
+publishing implement the features to a varying degree. iRODS, which is a tool
+for managing data, is clearly not designed to be sharing platform for
+research data. ACRIS has many other tasks as well, such as maintaining a the
+publication profile of researchers and reporting publications. EUDAT's B2Share
+offering offers a serviceable research data publication platform, but lacks the
+ability to restrict access to the datasets. IDA is an iRODS based system, but
+has some features for publishing datasets from the system. Biggest problem with
+it is that it's perceived very hard to use by users.
+
+Etsin is a metadata publication platform - it only contains metadata and links
+to the actual location of the datasets. While this is valuable, separating the
+research data from the metadata requires either integration between the storage
+and metadata systems or more work from the users.
 
 The identifier scheme is also a point of interest. Citing datasets is something
 that has not been widely adopted, which means that in order to help that
-adoption a well known identifier scheme should be used.
+adoption a well known identifier scheme should be used. It is good that there
+is a Finnish identifier scheme, but if datasets want international recognition
+an internationally known identifier scheme should be used.
+
+The technical solutions with a focus on research data publishing fill their
+role adequately. The user tests show that there are user experience and
+uasbility improvements that could be done - those are detailed in Section
+\ref{sec:prototype_outcomes}. What the user tests also show is that training
+related to the options when it comes to research data publishing is lacking
+and if the culture and willingness to share research data would be improved
+that would include a concious effort from the university side.
 
 \begin{sidewaystable}
     \caption{Existing solutions in light of research data publishing}
@@ -111,7 +149,7 @@ adoption a well known identifier scheme should be used.
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}Avaa    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{green}URN \\
             \cline{3-10}\cline{1-1}
-            \cellcolor{first-column-blue}Dataverse && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{green}++ & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}DOI/Handle \\
+            \cellcolor{first-column-blue}Dataverse && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++  & \cellcolor{green}++ & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}DOI/Handle \\
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}Hydra    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}DOI \\
             \cline{3-10}\cline{1-1}
@@ -144,7 +182,8 @@ adoption a well known identifier scheme should be used.
 \fi
 
 Research data publishing is the end goal of research data management, and
-Table \ref{table:management} shows the same tools being compared in the light
+Table \ref{table:management} shows the same tools compared previously in
+the contex of research data publishing tbeing compared in the light
 of research data management during the research process.
 
 \begin{sidewaystable}
@@ -197,9 +236,10 @@ of research data management during the research process.
 \fi
 
 The same tools that are suitable for research data publishing are not
-necessarily right for research data management and vice versa. Technical
-point solutions for both exist, but a solution that takes care of the whole
-lifecycle of the data is what is needed.
+necessarily right for research data management and vice versa. iRODS, IDA
+and the B2Drop side offer dedicated services to share research data during
+the research process and manage it in a centralized service. GitHub is a
+collaborative tool for projects around programming.
 
 This thesis has also identified many aspects of a solution that could solve the
 research data management and sharing problem. These requirements are split
