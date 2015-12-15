@@ -271,3 +271,42 @@ For now, the Aalto logo variants are shown in Figure~\ref{fig:aaltologo}.
     The hardware should be virtualized by the software on top of it &The hardware can be changed and the system on top of it does not need to be changed & The research data lifespan is likely to outlive several compute and storage hardware generations and hardware will always eventually fail\\
     \hline
 \end{tabularx}
+
+\pagebreak
+
+\section{User Experience Requirements}
+
+The user experience requirements shown here are not exhaustive - in order to
+serve users best they should be involved in designing the system.
+
+\tabcolsep=0.11cm
+\begin{tabularx}{\textwidth}{| >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | X |}
+    \hline
+    \textbf{Requirement} & \textbf{Metric}& \textbf{Rationale} \\
+    \hline
+    \rowcolor{Gray}
+    The system clearly shows what metadata is needed for the upload of datasets   &Uploaded datasets contain all the relevant metadata& Metadata is important and making sure that users input all of it makes the quality of data better\\
+    \hline
+    Search results are displayed in a way that even if there are a lot of search results the user is not confused&The data deluge from search does not hide the dataset the user is actually searching for &When the system contains many datasets, displaying search results becomes a pain\\
+    \hline
+    \rowcolor{Gray}
+    The user is provided with examples on how to write clear descriptions of their datasets &The descriptions are short and follow the best practices of the field&The free form descriptions of datasets are the most important when searching and trying to find relevant datasets to gain a basic understanding of the dataset\\
+    \hline
+    The research data management tool is as easy to use as the commercial cloud services &When compared in user tests, the research data tool gets as good scores as the commercial ones & The commercial cloud services will be the clear benchmark for the research data management tool and thus should be as good or better than those services\\
+    \hline
+    \rowcolor{Gray}
+    When searching, the user should be prompted to narrow down the search if there are too many results    &If there are over a hundred search results, the user should be prompted to narrow down the search & Users get frustrated if they can’t find what they are looking for and prompting them to narrow down the search helps them find results\\
+    \hline
+    The users have access to an overview of their data, published and unpublished& The publishing platform and the research data management tool are integrated to a common dashboard view & The users want to keep track of their projects and maybe want to even show off their current contribution\\
+    \hline
+    \rowcolor{Gray}
+    The data visualization should be interactive when applicable  &The user can define the visualization parameters and subsets of the data for the visualization& Visualizing data is a way to understand the data\\
+    \hline
+    The user should be rewarded for using the systems &The system generates reports or badges the user can show on his or her online profiles& Sharing research data needs to give a reward to the user\\
+    \hline
+    \rowcolor{Gray}
+    The system can highlight published datasets from time to time&The front page of the system has dedicated space for highlighted datasets&Highlighting datasets is a way of rewarding users and getting exposure for the datasets\\
+    \hline
+\end{tabularx}
+
+\normalsize
