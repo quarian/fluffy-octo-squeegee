@@ -2,20 +2,22 @@
 \label{chapter:positioning}
 
 Master's theses don't live in a vacuum. To position the thesis and provide the
-best possible outcome for Aalto University we made an effort to find out what
-is the current state of research data publishing and sharing as well as what
+best possible outcome for Aalto University we have made an effort to find out what
+is the current state of research data management, publishing and sharing as well as what
 are the current challenges and projects in the Finnish landscape. While the
 literature review in Section \ref{chapter:background} covered the overall view
 of the current status of publishing and sharing research data and research
-papers, the goal of this thesis is to provide value in the context of Finland.
+papers, the goal of this thesis is to provide practical value towards implementing
+research data management, publication and sharing systems. Practical
+insights lie within people working in the area.
 The tools used to position the thesis were interviews, benchmarking existing
-solutions and a questionnaire.
+solutions and a questionnaires.
 
 \section{Researcher interviews}
 \label{sec:expert_interviews}
 
 Scientists and researchers are the core user group of any publishing or sharing
-system since they are the ones generating the data to the system and populating
+system since they are the ones generating the data to the system and possibly populating
 the system. The research also shows that a successful repository system requires
 user engagement \cite{DBLP:conf/ercimdl/Martinez-UribeM09}. Scientist and
 researcher interviews were conducted within different research groups and
@@ -29,7 +31,7 @@ thesis - later, more in depth interviews were conducted to test a possible
 solution. This discussion can be found in Section \ref{chapter:prototype}.
 
 In an interview with a research group\footnote{M. Nurmela and the Complex
-Networks group at Aalto University, \url{http://becs.aalto.fi/en/research/complex\_networks},
+Networks group at Aalto University (\url{http://becs.aalto.fi/en/research/complex\_networks}),
 personal communication, July 31st, 2015} the findings fell in line with the
 findings from literature. As of writing of this thesis, data management is not
 systematically taught for the researchers and
@@ -57,7 +59,7 @@ issues, teaching the others to use databases and version control software to
 handle their data and code. The other members of the group, interviewed
 separately, noted that an effort had been made towards better policies in data
 handling. The group pointed out that personalized assistance and word of mouth
-were an efficient way to learn "boring" things like data management. Own
+were an efficient way to learn ''boring'' things like data management. Own
 previous experience and learning by doing seemed to be the main way people had
 learned to, for example, comment their code or arrange their research data into
 databases so that accessing them would require less time and managing code
@@ -103,7 +105,7 @@ publish research data should look like if it were to be implemented.
 
 If a system to publish and share research data would come to be it would have
 to be maintained and run by people other than the researchers, since the job of
-the researchers is to do research and not maintain software systems. With this
+the researchers is to do research and not to maintain software systems. With this
 in mind the people managing the scientific IT systems are a key component to
 building a successful research data management, publication and sharing
 platform.
@@ -128,7 +130,8 @@ to manage the data from the creation to the publishing and infrastructure that
 can be tailored to fit the different user needs. Research data is comes in
 many forms so a solution that is not flexible would be unsuitable.
 
-University of Jyväskylä has implemented a data repository system\footnote{\url{https://dvn.jyu.fi/dvn/}}
+University of Jyväskylä has implemented a Dataverse data repository 
+system\footnote{\url{https://dvn.jyu.fi/dvn/}}
 as well as an iRODS\footnote{\url{http://irods.org/}} system to manage and
 store research data. In an interview\footnote{M. Nurmela, I. Korhonen and A.
 Auer, personal communication, August 19th, 2015} they noted that nowadays
@@ -138,8 +141,6 @@ infrastructure to manage data during the research projects and publish the
 results in the end (even though Dataverse and iRODS are not currently
 easily compatible with each other, though some work has been done for
 that\footnote{\url{https://irods.org/wp-content/uploads/2014/06/Odum-DFC-iRODS-Boston.pdf}}).
-They are also working with CSC to get their iRODS system talking with the iRODS
-system at CSC.
 
 The Jyväskylä experts told that while the Dataverse system was easy to install
 and modify to accept Jyväskylä University credentials, it still had a long way to go
@@ -150,8 +151,8 @@ however, are using it manage their internal datasets. As to how to get the
 more datasets into the system, they planned to continue educating about it
 and making it that way a part of researchers' routine.
 
-Jyväskylä was more involved in development of the iRODS system, having even
-developed a system to facilitate collaboration between researchers
+As of writing of this thesis Jyväskylä is more involved in development of the iRODS system, having
+developed a system called Kanki to facilitate collaboration between researchers
 \cite{irodsinproceedings}. The Kanki system is a desktop interface to the iRODS
 system that allows users to easily access and modify data stored in the iRODS
 data grid. The Kanki system is not about publishing research data but data
@@ -189,12 +190,13 @@ primary users discussed in Sections \ref{sec:expert_interviews} and
 managerial types might not lie in the usability or maintainability of the
 system, but rather in managing costs and minimizing risks.
 
-From Aalto side the desire is to minimize the systems we have to build and
+Interviewing a manager from Aalto side it was made clear that there is a
+desire to minimize the systems we have to build and
 maintain ourselves - since CSC exists to provide scientific computing and
 storage resources, why should we not use them? Non established or new fields
 of science could have value from a local repository, but those that have
 international or discipline specific repositories could use those as well.\footnote{M. Nurmela, A. Sunikka, personal communication, July 17th, 2015}
-Certainly managing research data is a problem and a consensus solution has not
+Managing research data is seen as a problem and a consensus best solution has not
 emerged.
 
 The Finnish National library is in charge of long term preservation of relevant
@@ -239,7 +241,7 @@ system in their own silo.
 
 \section{Librarians}
 
-Publishing research data requires expertise in digital publishing and metadata
+Publishing research data requires expertise in digital publishing and metadata creation
 experience. University libraries are experienced in publishing digital research
 papers (open access or restricted access) and making metadata descriptions
 about digital and physical publications. This makes librarians and libraries
@@ -247,13 +249,14 @@ and essential part in bringing research data to the open publishing world.
 
 In an interview with the people responsible of the digital publishing at Aalto
 University Library\footnote{M. Nurmela and A. Rousi, personal
-communication, September 30th, 2015} brought up the essential role of
-librarians as the classifiers and describers of the data. Professional data
+communication, September 30th, 2015} the essential role of
+librarians as the classifiers and describers of the data was brought up. Professional data
 handlers can do very good metadata descriptions, even if they are missing
 some of the domain knowledge related to the research data. The librarians
 also handle the relationships to the publishers - though what is the role
-of traditional science publisher authorities in the future when organizations
-can publish datasets and even research papers papers easily on their own.
+of traditional scientific publishing authorities in the future when organizations
+can publish datasets and even research papers papers easily on their own remains
+an open question.
 
 Aalto University library runs the Aaltodoc service\footnote{\url{https://aaltodoc.aalto.fi/}}
 which contains full text materials on research papers and theses published
@@ -279,7 +282,12 @@ requires in addition to the metadata already in the original dataset? What
 is the most suitable file format for long term storage, since tools and
 software used to create it outdated relatively soon? The work
 to figure out these things and the Finnish long term archival project is going
-on during the writing of this thesis.\footnote{M. Nurmela and E. Keskitalo, personal communication, August 21st, 2015}
+on during the writing of this thesis.\footnote{\label{keskitalo}M. Nurmela and E. Keskitalo, personal communication, August 21st, 2015}
+
+From curation point of view persistent identifiers are very important for
+all kinds of research outputs. Since research data publishing is a new
+phenomenon, it's still undecided what kind of identifier should be used
+with it.\footnotemark[\getrefnumber{keskitalo}]
 
 The universities already have datasets stored within their systems and one
 challenge would be to get these datasets public as well. Manual work on that
@@ -307,15 +315,15 @@ scientists?
 \section{Course organizers}
 
 In addition to research, the mission of universities is to teach. With the
-world of science moving to the direction of more and more data intensive
-universities need to adapt and offer students the possibility to study with
+world of research moving to the direction of more and more data intensive science
+there is a need universities need to adapt and offer students the possibility to study with
 relevant datasets. Aalto University has started offering a minor in Data
 Science in order to cater to this need.\footnote{\url{http://studyguides.aalto.fi/minors-guide/2015/en/sci/sci-minors-for-all-aalto-students/analytics-and-data-science.html}}.
 
 In an interview with the people in charge of the Aalto Data Science minor
 it became clear that even though data intensive science is taught, there is no
 Aalto infrastructure for the teaching. Datasets and the computing power are
-acquired from vendors which had caused some awkward way arrangements since the
+acquired from vendors which had caused some awkward arrangements since the
 access to the outside resources had to be controlled more tightly than just
 on Aalto level. These issues can be worked out though and from the point of
 teaching it would be nice to have data available from within the university,
@@ -362,7 +370,7 @@ offer both computing power and disk space for Finnish institutions and they
 are a state-owned non-profit organization.\footnote{\url{https://www.csc.fi/csc}}
 Their role is interesting when it comes to research data management and
 publishing, since they already offer computing services to the relevant
-institutions in Findland. After all, one goal of publishing and sharing
+institutions in Finland. After all, one goal of publishing and sharing
 research data is to enable collaboration and involving the one institution
 in Finland that offers services to all the other institutions makes sense in
 that regard.
@@ -446,7 +454,7 @@ sector and if they do not have plans what is going on with that.
 \section{Research data management questionnaires}
 \label{sec:questionnaire}
 
-Two studies were conducted in Aalto University about research data management
+Separately from this this thesis wo studies were conducted in Aalto University about research data management
 and sharing. The goal of the studies was to find out the current needs as well
 as the current status of research data management within Aalto University. The
 studies were carried out as questionnaires and the questionnaires were
@@ -456,7 +464,7 @@ The first questionnaire \cite{survey1} divided
 the research process in the context of research data into four phases, which
 are the defining of the research scope, the research, publishing the research
 data and archiving the research data. 87 people submitted answers to the study from all the
-schools in Aalto. The breakdown of answers is shown in Figure \ref{fig:chart_answers}.
+schools in Aalto. The breakdown respondents is shown in Figure \ref{fig:chart_answers}.
 
 \begin{figure}
     \begin{centering}
@@ -523,14 +531,14 @@ of Aalto as shown in Figure \ref{fig:answers_branches}.
     \label{fig:answers_branches}
 \end{figure}
 
-The second questionnaire found that the most important things for data
-management and sharing system would be that the data can easily be files
+The second questionnaire found that the most important things for research data
+management and sharing system would be that the resesarch data
 could be worked on in collaboration, big files that you cannot attach to
 emails could be shared and that there would be version control for the files.
 Research data would mostly be shared between Aalto University staff, but
 sharing with collaborators outside Aalto, sharing with students as well as
 personal file storage were required of the system. Figure \ref{fig:share_with}
-shows who the daat needs to ba shared with. The research data should be
+shows who the research data needs to be shared with. The research data should be
 accessible with personal computers in addition to Aalto workstations.
 
 \begin{figure}
@@ -547,7 +555,7 @@ spreadsheets) and PDF files. Different image, video, sound, code and other
 formats are brought up in the questionnaire, even virtual machine images.
 The amount of required storage space varies from 10Gt to over 500Gt, as shown
 in Figure \ref{fig:size}. The most
-common storage time for research data is measured in years, since projects that
+common storage time for research data is measured in years, since that
 is the scope of research projects and data management is required throughout
 the project. The distribution of required storage times is shown in Figure
 \ref{fig:time}.
@@ -557,7 +565,8 @@ the project. The distribution of required storage times is shown in Figure
     \begin{centering}
         \includegraphics[width=\textwidth]{images/size}
     \end{centering}
-    \caption{The required storage capacities according to the respondents}
+    \caption{The required storage capacities according to the respondents - vertical
+             axis is the percentage of respondents}
     \label{fig:size}
 \end{figure}
 
@@ -565,19 +574,17 @@ the project. The distribution of required storage times is shown in Figure
     \begin{centering}
         \includegraphics[width=\textwidth]{images/time}
     \end{centering}
-    \caption{The required storage time of datasets}
+    \caption{The required storage time of datasets - the horizontal axis is the amount
+             of respondents}
     \label{fig:time}
 \end{figure}
-
-
-
 
 Most of the respondents of the second questionnaire handle their research data
 every day and their research data is confidential. Not all confidential data
 needs to be shared outside Aalto University, but most respondents had to do
 that from time to time.
 
-Most of the respondents used existing cloud services, such as Google Drive or
+Most of the respondents use existing cloud services, such as Google Drive or
 Dropbox to do research data management during their projects. The systems are
 used both out of necessity (there is no existing Aalto infrastructure, for
 example, to have non-Aalto people working on the same datasets or files) and
@@ -586,8 +593,8 @@ outside of work. For some, this is not an option, since some data has to be
 stored in Finland and the cloud providers cannot comply to that request.
 
 These studies show that there are indeed a need already in place for a system to
-manage research data in Aalto as well as training and policies to support data
-management through the lifecycle of data. Existing cloud based solutions, such
+manage and share research data in Aalto. In addition training and policies to support data
+management through the lifecycle of data are required. Existing cloud based solutions, such
 as Google Drive and Dropbox are the benchmark that people use to compare
 existing and future solutions to. This sets a bar for the solutions that
 would be implemented to address research data management and publication
@@ -606,11 +613,12 @@ processes that they required.
 
 For a more visual overview, see Section \ref{chapter:conclusions} for an
 overview table of existing solutions. The Section \ref{chapter:prototype}
-contains a more technical view on some of the systems.
+contains a more in depth look into the Dataverse system and the installation
+processes of Hydra Project and Zenodo.
 
 This is not a comprehensive listing of repository systems. Many institutions
 have implemented their own systems and other, non-institute related systems
-exist as well. The benchmark solutions presented below have been chosen due to
+exist as well. The benchmark solutions presented here have been chosen due to
 their wide adoption.
 
 Harvard Dataverse is a Harvard University originated open source system
@@ -625,9 +633,9 @@ faceted search. For server software you can use Glassfish\footnote{\url{https://
 or Apache\footnote{\url{https://httpd.apache.org/}}.
 
 Their website\footnote{\url{http://dataverse.org/}} reports that the Dataverse
-software would be installed in 12 universities around the world, but since this
-number does not include, for example, the Jyväskylä Universiy Dataverse making
-it reasonable to assume that there are other Dataverse out in the world. The
+software would be installed in 12 universities around the world. This
+number does not include, for example, the Jyväskylä Universiy Dataverse which makes
+it reasonable to assume that there are other Dataverses out in the world. The
 main Harvard Dataverse\footnote{\url{https://dataverse.harvard.edu/}}, which
 is the biggest Dataverse instance around, contains 59 652 datasets that contain
 288 174 files as of writing this thesis.
@@ -647,14 +655,14 @@ footnotes.
 
 Dataverse allows manual upload of datasets and an API to explore datasets
 and upload them programmatically. Once published, new versions of datasets
-can be uploaded and all the versions remain visible. Dataverse also includes
-TwoRavens\footnote{\url{http://datascience.iq.harvard.edu/about-tworavens}}
+can be uploaded and all the versions remain visible. Dataverse also includes the the
+TwoRavens\footnote{\url{http://datascience.iq.harvard.edu/about-tworavens}} application
 for visualizing tabular datasets.
 
 Dataverse is a functional system for publishing research data. It is not a tool
 for managing research data during the research project, but it could be used
 even during that time to share research data with collaborators. It also does
-not offer long term archival options out of the box.
+not offer long term archival options.
 
 CKAN\footnote{\url{http://ckan.org/}} is an open source data portal software that aims to make data available
 over the Internet. CKAN instance was not installed for the purposes of this
@@ -669,7 +677,7 @@ are coarse grained, public sharing of datasets or sharing withing an
 organization. CKAN is also promotes its extensibility, and indeed it has been
 adopted, for example, as the frontend of the CSC's
 services\footnote{\url{https://github.com/kata-csc}}. What separates CKAN from
-the other repository solutions is that it offers extensive geographic
+the other repository solutions is that it offers extensive geospatial features.
 
 CKAN is designed for publishing and sharing data and not for managing data
 during the project it's being created.
@@ -678,10 +686,11 @@ Invenio\footnote{\url{http://invenio.readthedocs.org/en/latest/}} is a CERN
 originated digital library management software. It started as the CERN
 documentation server, hosting over 1 000 000 bibliographic records and is now
 available at the public domain\footnote{\url{https://github.com/inveniosoftware}}.
-Invenio installation was tried to get a better grasp of the system. Zenodo\footnote{\url{https://zenodo.org/}}
+Zenodo\footnote{\url{https://zenodo.org/}}
 is a CERN run public instance of Invenio with a thin UI layer on top. The EUDAT
 B2Share service\footnote{\url{https://b2share.eudat.eu/?ln=en}} also runs on
-Invenio.
+Invenio. Invenio installation was tried using the source code of Zenodo to get
+a better grasp of the system.
 
 Invenio is built with Python and it implements similar features as the other
 systems discussed earlier in this section. Fulltext metadata search, uploads
@@ -695,12 +704,17 @@ Invenio is like Dataverse - a tool to publish digital assets but not
 for managing data during research.
 
 A side note from EUDAT is that they have also implemented a Dropbox-like
-service called B2Drop\footnote{\url{https://eudat.eu/services/b2drop}}, which is targeted to researches that want to share
-reseach data during the research project.
+service called B2Drop\footnote{\url{https://eudat.eu/services/b2drop}},
+which is targeted to researches that want to share
+reseach data during the research project. EUDAT project source code for
+both B2Share and B2Drop
+is also available online\footnote{\url{https://github.com/EUDAT-B2SHARE},
+\url{https://github.com/EUDAT-B2DROP}}.
 
 The Hydra project is an open source digital repository solution. The Hydra
 solution was also tested during the writing of this thesis by installing and
-setting up the system in addition to reading the related documentation.
+setting up the system in addition to reading the related documentation and
+trying available instances.
 
 The Hydra project is a Ruby on Rails\footnote{\url{http://rubyonrails.org/}}
 application built on top of the Fedora repository software\footnote{\url{http://www.fedora-commons.org/}}.
@@ -755,7 +769,7 @@ languages. iRODS also scales from single personal computers into large data
 grids.
 
 In Finland iRODS is in use at least in the University of Jyväskylä and in the
-systems of CSC (the IDA system mentioned in Section \ref{sec:csc} uses iRODS.
+systems of CSC (the IDA system mentioned in Section \ref{sec:csc} uses iRODS).
 The iRODS systems in Finland focus on enabling researcher collaboration, which
 is the role iRODS is primarily designed for. The iRODS architecture is not
 designed for sharing data, but could be used as a part of a system that shared
@@ -763,7 +777,7 @@ data.
 
 GitHub\footnote{\url{https://github.com/}} has been mentioned a few times as
 the place where the source code of many of the projects mentioned here resides.
-It is a close analogue to sharing research, since it is a platform to share
+It is a close analogue to sharing research data, since it is a platform to share
 formatted information between collaborators and anyone who might be interested
 in the source code. Being a widely adopted platform it also contains, for
 example, lists to datasets\footnote{\url{https://github.com/caesar0301/awesome-public-datasets}}
@@ -774,7 +788,7 @@ The Zenodo connection also makes source code citeable.
 GitHub hosts, according to their own statistics as of writing of this thesis,
 30.1 million code repositories. While the main appeal of GitHub is to allow
 software to be written collaboratively (GitHub could be seen as the
-collaborative extension to Git\footnote{\url{https://git-scm.com/}}, the
+collaborative extension to Git\footnote{\url{https://git-scm.com/}}), the
 version control software. GitHub also hosts some data and visualizes that data.
 What really sets GitHub apart from the research data sharing platforms is the
 social aspects it contains. GitHub has powerful issue tracking systems,
@@ -782,7 +796,10 @@ commenting capabilities and it promotes good coding style and contribution
 by rewarding the contributors with recognition.
 
 GitHub is a Ruby on Rails application with Git and the required C daemons
-integrated to it.
+integrated to it. Git makes it also tool for managing code during the research
+project, making GitHub a solution for the entire lifetime of source code. There
+is also GitLab\footnote{\url{https://about.gitlab.com/}}, that enables
+institutions to set up their own GitHub-like systems.
 
 \clearpage
 
