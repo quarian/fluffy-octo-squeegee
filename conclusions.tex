@@ -9,7 +9,7 @@ how they differ in the context of research data publishing, whereas Table
 data management during a research project. Table
 \ref{table:legend_colors} shows the legend that is used in Tables
 \ref{table:solutions} and \ref{table:management}. Later in this section the
-proposed requirements for a succescull research data management solution
+proposed requirements for a successfull research data management solution
 are presented.
 
 \captionof{table}{The color coding of the summary Tables \ref{table:solutions} and \ref{table:management}}
@@ -22,11 +22,11 @@ are presented.
                           in the solution \\
     \hline
     \multicolumn{1}{|c|}{\cellcolor{yellow}+} & The feature is implemented in the solutions in some way - it might need
-                          some work to get up and running or the other features of the system can be used to
+                          some work to get up and running or the other features of the solution can be used to
                           approximate the functionality \\
     \hline
-    \multicolumn{1}{|c|}{\cellcolor{red}-}    & The feature is missing from the solution or can be found from the system but according
-                          to user feedback is too hard to use and is a clear weak point of the system \\
+    \multicolumn{1}{|c|}{\cellcolor{red}-}    & The feature is missing from the solution or can be found from the solution but according
+                          to user feedback is too hard to use and is a clear weak point of the solution \\
     \hline
 \end{tabularx}
 
@@ -55,9 +55,9 @@ below in Table \ref{table:solution_features}:
                       to the datasets, for example\\
     \hline
     Metadata Storage &  Metadata storage means that the system has a structured way
-                        of storing metadata anout datasets - this does not mean that
+                        of storing metadata about datasets - this does not mean that
                         the system should contain actual research data, since some services
-                        are built just as places to store metadata and point to datasets\\
+                        are built just as places to store metadata and links to datasets\\
     \hline
     \rowcolor{Gray}
     Open Access Data    & System that implements this feature allows the datasets to be searched
@@ -82,14 +82,14 @@ below in Table \ref{table:solution_features}:
                            of the already uploaded datasets without deleting the old datasets, since
                            someone might use and refer to the old datasets\\
     \hline
-    Identifier Scheme    & Identifier scheme tells which, if any, persistent identifier schemese the
+    Identifier Scheme    & Identifier scheme tells which, if any, persistent identifier schemes the
                            solution implements\\
     \hline
 \end{tabularx}
 
 From the solutions presented in Table \ref{table:solutions} the systems that
 are designed primarily for research data publishing (Avaa, Dataverse, Hydra,
-Zenodo, and CKAN) have almost all the features specified here. What some of
+Zenodo, and CKAN) have almost all the features specified. What some of
 them are lacking is the ability to restrict access to the research data, which
 is a requirement for some datasets that contain data that has some
 confidentiality clauses. Avaa, for example, is a platform for nothing else than
@@ -124,17 +124,17 @@ and metadata systems or more work from the users.
 
 The identifier scheme is also a point of interest. Citing datasets is something
 that has not been widely adopted, which means that in order to help that
-adoption a well known identifier scheme should be used. It is good that there
-is a Finnish identifier scheme, but if datasets want international recognition
+adoption a well known identifier scheme should be used. It is good that
+a Finnish identifier scheme exists, but if datasets want international recognition
 an internationally known identifier scheme should be used.
 
 The technical solutions with a focus on research data publishing fill their
 role adequately. The user tests show that there are user experience and
 uasbility improvements that could be done - those are detailed in Section
 \ref{sec:prototype_outcomes}. What the user tests also show is that training
-related to the options when it comes to research data publishing is lacking
-and if the culture and willingness to share research data would be improved
-that would include a concious effort from the university side.
+related to the options when it comes to research data publishing is lacking.
+If the culture and willingness to share research data is to be improved,
+that would require a concious effort from the university side.
 
 \begin{sidewaystable}[h]
     \caption{Existing solutions in light of research data publishing}
@@ -147,7 +147,7 @@ that would include a concious effort from the university side.
             \vspace{1 mm}
             \textbf{Tool} &\cellcolor{white}& \textbf{Data Storage} & \textbf{Metadata Storage} & \textbf{Open Access Data} & \textbf{Restricted Data} & \textbf{Long Term Archival} & \textbf{Full Text Search} & \textbf{Dataset Versioning} & \textbf{Identifier Scheme} \\
             \cline{3-10}\cline{1-1}
-            \cellcolor{first-column-blue}IDA     && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{green}URN \\
+            \cellcolor{first-column-blue}IDA     && \cellcolor{green}++ & \cellcolor{yellow}+ & \cellcolor{yellow}+  & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{green}URN \\
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}Etsin   && \cellcolor{red}-  & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{red}-  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{green}URN \\
             \cline{3-10}\cline{1-1}
@@ -161,7 +161,7 @@ that would include a concious effort from the university side.
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}EUDAT    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{green}Handle \\
             \cline{3-10}\cline{1-1}
-            \cellcolor{first-column-blue}iRODS    && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  & \cellcolor{red}-  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}- \\
+            \cellcolor{first-column-blue}iRODS    && \cellcolor{green}++ & \cellcolor{yellow}+ & \cellcolor{red}-  & \cellcolor{red}-  & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{red}- \\
             \cline{3-10}\cline{1-1}
             \cellcolor{first-column-blue}CKAN     && \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{green}++ & \cellcolor{red}-  &  \cellcolor{green}++ & \cellcolor{yellow}+  & \cellcolor{yellow}+ \\
             \cline{3-10}\cline{1-1}
@@ -189,7 +189,7 @@ that would include a concious effort from the university side.
 
 Research data publishing is the end goal of research data management, and
 Table \ref{table:management} shows the same tools compared previously in
-the contex of research data publishing tbeing compared in the light
+the contex of research data publishing being compared in the light
 of research data management during the research process. Table
 \ref{table:management_features} explains the features that were
 explored from the research data management angle.
@@ -238,7 +238,7 @@ explored from the research data management angle.
 
 The same tools that are suitable for research data publishing are not
 necessarily right for research data management and vice versa. iRODS, IDA
-and the B2Drop side offer dedicated services to share research data during
+and the B2Drop side of the EUDAT service offer dedicated services to share research data during
 the research process and manage it in a centralized service. GitHub is a
 collaborative tool for projects around programming.
 
@@ -308,7 +308,10 @@ the researchers creating and managing the research data.
 When looking at the existing solutions through both the context of research
 data management and publishing it is clear that a big problem is that there
 is not a solution that would handle the entire lifecycle of the data from
-creation to publishing. Many universities, Aalto University included, have
+creation to publishing. Research data sharing and managing should not be considered
+separately from research data management. Without management, there can not be
+effectice sharing or publishing and without sharing or publishing there is no
+need for management. Many universities, Aalto University included, have
 implemented neither managing or publishing research data tools in a centralized
 way. The lack of dedicated research data management
 infrastructure also affects the training and knowledge of research data
