@@ -5,7 +5,7 @@
 
 In this thesis we have examined the challenges around research data management,
 sharing and publishing. The methods used are literature reviews,
-interviews, surveys, technical benchmarks and user tests in the form of contextual
+interviews, questionnaires, technical benchmarks and user tests in the form of contextual
 interviews and lead user tests.
 
 Literature reviews on the subject show that while the open access way of
@@ -32,7 +32,7 @@ in places chosen by the interviewees to make the interview process easier
 for them. One possible problem with the interviews was that they were
 conducted alone, but this was taken into account by recording the interviews.
 
-The surveys were not designed for the use of this thesis, instead they were used
+The questionnaires were not designed for the use of this thesis. Instead they were used
 to find out the research data management needs of Aalto for planning the
 future of services offered by Aalto. However, the questions asked in the
 surveys were very relevant for this thesis as well which led to the decision
@@ -49,13 +49,13 @@ that the conclusions drawn from the thorough inspection of Dataverse do not
 apply for the other solutions directly, but since the implementations are quite
 similar the risk is likely low. We tried separating the learnings from the
 systems from the system specific features, such as the look and feel of their
-UIs. The cloud environment that was used as the running environment of the prototype
+UIs. The cloud environment that is used as the running environment of the prototype
 Dataverse system would not be the installation destination of the final system.
-This did not seem to generate problems for the testing.
+This did not generate problems for the testing of the system.
 
 The contextual interviews and lead user tests were chosen as a tool to learn
 more about the research data publication systems to complement the technical
-examination. Surveys are the other option, but while you could get more data
+examination. Questionnaires would be another option, but while you could get more data
 points from a survey, the information is superficial. One angle for this thesis
 is that Aalto University is forming a data policy to to govern research data
 management and publishing and gaining deeper user insights through controlled
@@ -68,13 +68,15 @@ examination was carried out with should provide value.
 
 It was interesting that the interactions with the users of the system brought
 up similar points that were raised in the literature. The lack of culture and
-same reasons for not sharing data were found out within these users.
+same reasons for not sharing research data were found out within the users as were
+found out in the literature.
 The sample size is not, again, scientifically significant, but
 it seems likely that the problems reported in literature around the world do
 happen in Finland as well.
 
 The goal of combining these methods was to gain a holistic view on the problem
-and not only focus on the technological side.
+and not only focus on the technological side. More user engagement would have
+given a better view.
 
 The chosen methodologies were chosen also partially to accommodate the studies
 of the writer of this thesis - I have studied user centered design as a my
@@ -85,7 +87,7 @@ minor during my Masters' studies.
 While the main focus of this thesis from the beginning was to find
 appropriate technical solutions for sharing research data it became clear
 that sharing research data is not strictly a technical problem. While there is
-a lot of work to be done to make tools and systems to make the process of
+a lot of work to be done to implement tools and systems to make the process of
 sharing and publishing research data easy, a point solution to do just that
 would fall flat. Firstly, research data publication and sharing is closely
 tied to research data management during the research process. If research data
@@ -94,15 +96,15 @@ the process of eventually making it public is very hard or impossible. And even
 though it might be technically viable the time and effort it would take to
 turn datasets that have not been properly documented and maintained during the
 process might be prohibitive. Secondly, the culture for sharing research data
-is not there yet. There is no knowledge about either research data management
+is still developing. There is not enough knowledge about either research data management
 or sharing. Additionally, there is no incentive to share research data, since
 researchers' contribution is measured mainly in citation to research papers.
 
 The problem of research data also involves people from different disciplines
 in unprecedented ways. The roles of libraries, university software
 infrastructure maintainers and the researchers themselves are undefined in
-the new world of research data management, publication and sharing. And then
-if you throw in the publishers and the peer review process that is in the
+the new world of research data management, publication and sharing. When you
+consider the academic publishers and the peer review process that is in the
 heart of the scientific publishing game it is clear that the roles of all
 these actors need to be defined in the research data context.
 
@@ -110,14 +112,45 @@ Making research data accessible is likely to promote the quality of science.
 To achieve this, better technical solutions need to be implemented and the
 culture around research data needs to be taken into a more open direction.
 
+Examining the state and options that come with research data management,
+publishing and sharing four survival strategies for the data intensive world
+of research can be outlined. The strategies are, in order from the most recommendable
+to the least recommendable, international collaboration,
+open source solutions, national collaboration and implementing own solutions.
+
+International collaboration entails being a part of a international initiative
+for research data management, sharing and publication. EUDAT is an example of
+an initiative like this. This makes collaboration with others that are working
+in the initiative easier, takes the implementation load off the institutions
+while giving them a chanve to participate and lessens the amount of existing
+systems and standards. The challenge is to adapt the international solutions
+to comform to the local needs of research institutions.
+
+Implementing one of the existing open source solutions in a research
+instiution would bring that instiution to the community around that solution.
+Example solutions include Dataverse, CKAN and Invenio. The problem with institutions
+implementing different open source solutions is that it increases the overall
+complexity of the research data landscape and puts the burden of maintaining
+the solution to the research institution.
+
+National initatives, such as the Open Research and Science initiative in Finland,
+take the burden of implementation from the research institutions. The problem is that
+research nowadays is global and the national providers are likely to enable national
+collaboration very well, but international collaboration would be a challenge.
+
+Implementing a novel solution for a research institution is an option, but seems
+very unefficient since solutions exist already. While you would get a perfectly
+tuned system for your institution, it would be more cost efficient to use existing
+solutions. Implementing own solutions also means that the burden to integrate with
+other systems is on you.
+
 \section{Future work}
 
-In the previous section we have discussed what would be need to make research data
-more open. Future work around the subject should include both integrated
-technical solutions that make good research data management a part of the
-daily life of researchers and thus making the publication of their data easy
-and the culture surrounding research data management and publishing.
-The change the culture more research on the benefits of open research data
+Future work around the subject should include both integrated
+technical solutions that make good research data management practices a part of the
+daily life of researchers. This would in turn make the publication of their data easy
+and help improving the culture around the subject.
+To change the culture more research on the benefits of open research data
 is required, but there might be other ways as well.
 
 Some fields of science, such as physics, psychology and genomics have been
@@ -133,14 +166,14 @@ such solutions for researchers as soon as possible. On the other hand, maybe
 citations to research data could be integrated to the h-index of researchers,
 thus making the already used metric reward those who publish their datasets.
 This reframing of the problem - instead of asking ''how should we implement
-such systems that help with research data?'' we ask ''how do we motivate people
+systems that help with research data?'' we ask ''how do we motivate people
 to share their research data'' - is a design paradigm that has been used
 successfully in other system level design problems \cite{dorst2015frame}.
 
 The solutions for the technical and cultural problems might also be found
 from analogous problems. For example, software development has benefited for
 a long time from the open source community, where people contribute code for
-the public domain without compensation. It is been studied that people do not
+the public domain without monetary compensation. It is been studied that people do not
 do this out of the kindness of their hearts, but instead with the goal of
 turning their free work now into profit in the future
 \cite{DBLP:conf/hicss/HarsO01}. The tools that are used to share software,

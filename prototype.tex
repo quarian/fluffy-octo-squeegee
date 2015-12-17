@@ -8,19 +8,21 @@ implement a new system. Instead we have implemented a local installation
 of some of the systems presented in the benchmarking section. From the test
 installations we have chosen the one that works the best and used that to
 run tests on potential users of the system. The tests are used to gain insights
-on what the finalized system would look like. It is also notable
-that the existing solutions are remarkably similar, so using any one of them
+on what the finalized system should look like. It is also notable
+that the existing solutions are remarkably similar as noted in as noted
+in Section \ref{sec:benchmarking}, so using any one of them
 would give applicable results.
 
 The prototype solution focuses on publishing and sharing of research data. The
 other option would have been to focus on the research data management during
 the research project, but research projects last longer than the span of this
-thesis and the results gained from that would likely be quite superficial.
+thesis and the results gained from that avenue of research that would likely be quite superficial.
 The lack of culture and practices are a factor for both publishing and
 and managing research data. The lacking of research data management culture is
 due to the lack of education and need for it, whereas publishing research data
-is a moderately new phenomenon. This makes it a more novel subject
-of study.
+is a moderately new phenomenon and the culture is still being formed. This makes it a more novel subject
+of study. Increased demand for research data sharing and publishing would also
+force research data management practices to be developed further.
 
 We ended up choosing the Harvard Dataverse solution to be the prototype for our
 purposes. The following sections detail the rationale behind this choice, the
@@ -30,8 +32,9 @@ system along with the learnings.
 \section{Rationale behind selecting Dataverse}
 
 As a part of the benchmarking the existing solutions and in order to select the
-we right tool to run tests on users installations of a Hydra head, a
-Zenodo instance and a Harvard Dataverse instance were tried. These three were chosen
+right tool to run tests on users we tried installations of a Hydra head (Hydra head is a
+Hydra instance in the Hydra Project terminology), a
+Zenodo instance and a Harvard Dataverse instance. These three were chosen
 because they represent different technologies and are widely adopted as tools
 for publishing research data.
 
@@ -79,8 +82,8 @@ the installation bundle\footnote{\url{http://guides.dataverse.org/en/latest/inst
 
 The easy installation immediately gave a functioning software repository to
 conduct tests with and that lead to the decision to use Dataverse as the
-prototype to test current data repository solutions and gain feedback to plan
-ahead.
+prototype to test current data repository solutions and gain user feedback to
+supplement the other research.
 
 Though implemented in different technologies, the functioning of the existing
 research data repository systems is quite similar. All of them offer form based
@@ -93,7 +96,7 @@ The similarity of the systems as well as the fact that there is no global
 consensus on what repository software is the best in business hints that you
 could use any one of them in your organization. From this angle it also makes
 sense to use one of them to gain user insights and figure out how the systems
-should be developed in order to gain more users for them.
+should be developed in order to satisfy the user needs better.
 
 \section{Users of the system}
 \label{sec:users}
@@ -115,7 +118,7 @@ the following:
 The requirements of these different stakeholders are boiled down to user
 stories, which are presented in Appendix \ref{chapter:first-appendix}.
 
-\section{System description}
+\section{Prototype system description}
 \label{sec:system_description}
 
 Harvard Dataverse is a Java application. Other technologies employed are Apache
@@ -148,9 +151,9 @@ dataset. The Dataverse split of the system also allows for fine grained access
 control, since Dataverses can be shared with no one, with single users or user
 groups.
 
-Users, other than the administrators of the Dataverse, can use the Dataverse
+Users can use the Dataverse
 with either the web user interface or the API offered by Dataverse. The
-dataflow of using the Dataverse application\footnotemark[\getrefnumber{architecture}] is shown in Figure
+dataflow and interplay of the different components of the Dataverse application\footnotemark[\getrefnumber{architecture}] is shown in Figure
 \ref{fig:dataflow}.
 
 \begin{figure}
@@ -166,7 +169,7 @@ Application in Figure \ref{fig:dataflow}. Ingest refers to uploading datasets
 to the system and the Index and Search and Data/Service components serve the
 user the desired content, be it search results or data to be downloaded. The
 rApache component handles the data visualization and runs the TwoRavens tool,
-and RServe is used for the statistical computation what the system does.
+and RServe is used for the statistical computation when the user requests that.
 
 Two versions of the Dataverse system were installed - one from source
 code\footnote{\url{https://github.com/quarian/dataverse}} and one from the
@@ -175,11 +178,11 @@ Dataverse\footnote{\url{https://github.com/IQSS/dataverse/releases/tag/v4.2}}.
 The installations were run in the CSC cPouta
 environment\footnote{\url{https://research.csc.fi/cpouta}}, which is an
 OpenStack instance\footnote{\url{https://www.openstack.org/}}. The source code
-installation is referenced from now as the development installation since it
-was used to get a feel of the code and the system quality and with the access
-to the code if weird situations would come up they could be debugging easier.
+installation is referenced from now as the development installation. It
+was used to get a feel of the code and the system quality and the access
+to the source makes debugging weird situations easier.
 The installation from the installation bundle is referred to as the production
-installation, since it should be more stable than the branch of development
+installation. The installation bundle should provide a more stable system than the branch of development
 code that was forked for the development installation. Figure
 \ref{fig:cpouta} shows the different installations in the cPouta environment.
 
@@ -205,6 +208,8 @@ As for the information security of the prototype solution, the development
 installation is not set up with any firewall rules or other security, since
 its purpose is to get a feel of the system. For the production installation
 firewall rules are set using the security groups functions of OpenStack.
+Inbound TCP/IP traffic was only allowed to port 8080, which Glassfish was
+listening to.
 When it comes to research data, security is important, and since the
 technologies such as Glassfish and postgreSQL are well known software and
 their default passwords and ports are well known setting up firewalls and
@@ -212,6 +217,10 @@ changing those passwords is imperative. Additionally, with Dataverse,
 firewalling the port that Apache Solr uses is important, since it circumvents
 the user credentials and it could be used to retrieve any indexed information
 in the system.
+
+To replicate the test systems follow the installation
+instructions\footnote{\url{http://guides.dataverse.org/en/latest/installation/}}
+and the description here.
 
 \section{System test setup}
 \label{sec:system_testing}
@@ -221,8 +230,8 @@ with actual users. Of all the stakeholders groups presented in Section \ref{sec:
 the research scientists is the most important one, since without them there is
 no research data and without them using the research data repository there is
 no public research data. Section \ref{chapter:positioning} summarizes learnings
-from the other stakeholder groups. The section also contains results from
-surveys conducted on research data management and publishing to provide context
+from the other stakeholder groups. Section \ref{chapter:positioning} also contains results from
+surveys conducted on research data management and sharing to provide context
 also from the point of view of researchers.
 
 To test this system we worked together with the Complex Networks
@@ -230,7 +239,7 @@ Group\footnote{\url{http://becs.aalto.fi/en/research/complex\_networks/}} and th
 Speech Group\footnote{\url{http://research.ics.aalto.fi/speech/}} of Aalto
 University. Two kinds of tests were designed and implemented. The first test was a contextual
 interview - which means an interview and observation conducted in the user's normal working
-environment instead of lab. The contextual interviews were conducted both with
+environment. The contextual interviews were conducted both with
 the development installation of the Dataverse as a tool for discussion and as
 conversations and observations about the current state of research data management and the
 current working practices. The second test was conducted with two lead users
@@ -248,7 +257,7 @@ addition the interviewees were asked to use the actual Harvard
 Dataverse\footnote{\url{https://dataverse.harvard.edu/}} to find datasets
 relevant to their field of study and talk through the process. All these
 interactions were also observed to find out usability and other issues that
-might arise during these exchanges. In total 10 members of the Complex
+might arise during the exchanges. In total 10 members of the Complex
 Networks group were involved in the contextual interviews.
 
 The lead users were granted access to the development Dataverse and were
@@ -261,7 +270,7 @@ and interviewed about their experiences with the Dataverse system.
 The goal of these tests was to understand the current status of research data
 management and publishing, how a research data publication system would fit
 this status and how well does the research data publication system fill its
-designated role.
+designated role. The usability of the system is also a point of interest.
 
 In addition the installation and maintenance of the prototype installations
 would give insight on how the system would be to maintain and how it would work
@@ -270,22 +279,22 @@ from a technical point of view.
 \section{Outcomes of the prototype and the tests}
 \label{sec:prototype_outcomes}
 
-The contextual interviews and lead user tests yielded results technical matters,
+The contextual interviews and lead user tests yielded results on technical matters,
 user interface and experience matters and on the current status of the research
 data management and publishing.
 
 The results of the tests showed that the technical implementations for research
 data sharing fill their role. In the contextual interviews it was clear that
 the manual uploading and searching worked fine - the users were able to pick up
-the process of searching and uploading datasets. The upload process is form
+the process of searching and uploading datasets quickly. The upload process is form
 based, shown in Figure \ref{fig:upload} which is similar to many
 form based upload pages you can find online. Files for datasets can be dragged and
-dropped to the user interface or the file browser of the computer and the users
-were able to find the suitable method for them. But even
-though the upload process is mechanically easy, the upload form contained part
+dropped to the user interface or the file browser of the computer can be used. The users
+were able to find the suitable method for them from the two options. But even
+though the upload process is mechanically easy, the upload form contained a part
 where the user was supposed to insert keywords of the dataset being uploaded.
-The keywords come with the concept of vocabulary - which was not known to the
-users, as shown in Figure \ref{fig:vocabulary}. In this context vocabulary
+The keywords come with the concept of vocabulary that was not known to the
+users. The point of confusion is shown in Figure \ref{fig:vocabulary}. In this context vocabulary
 refers to a set of words that have been agreed upon within a field of science
 in order to standardize communication within the field.
 
@@ -330,10 +339,10 @@ datasets. The search results leave users lacking, however. This is not entirely
 the fault of the search system, since the users found the names and short
 descriptions of the datasets poor at describing the datasets which made
 finding relevant datasets hard. Using the advanced search, which all the users
-did not find, helped to narrow down the options, but the options in the
+did not find, helps narrow down the options. The options in the
 advanced search were noted to miss details. Details the users were missing
-were dataset size and metadata related to their field. It was also clear that
-the system worked very well if you knew what you were looking for, for example
+were dataset size and metadata related to their field. It was noted that
+the system would work very well if you knew what you are looking for, for example
 a scenario where your fellow researcher would have shared the identifier of
 the dataset.
 
@@ -345,9 +354,9 @@ the dataset.
     \label{fig:search_main_page}
 \end{figure}
 
-The order in which the results were displayed was also unclear to the users.
+The order in which the results are displayed is also unclear to the users.
 The search results page offers the chance to sort the results, but that option
-was missed by all users. The default setting is to sort the results by
+was missed by all users during the tests. The default setting is to sort the results by
 relevance, but it is unclear to what relevance refers to in this context, since
 the default search searches all searchable fields in datasets, Dataverses and files.
 The fact that Dataverses, datasets and files are by default mixed in the search
@@ -369,7 +378,7 @@ Dataverse implements helpful hover texts on the terms, as shown in Figure
 \ref{fig:hovertext}. This feature went unnoticed by all users at first, but
 most of them would find the feature by accident and find it helpful. It would
 help if the helpful hover text would be indicated, for example, by a question
-mark symbol or something similar.
+mark symbol next to the item to be explained.
 
 \begin{figure}
     \begin{centering}
@@ -380,7 +389,7 @@ mark symbol or something similar.
 \end{figure}
 
 What was common in both the contextual interviews and the lead user tests was
-that the concept of publishing research data was novel for all the users. None
+that the concept of publishing research data is novel for all the users. None
 of them had published their research data online and few had used datasets from others,
 but in those cases the datasets were always acquired by request and then
 delivered using existing systems, such as Google Drive or email. When 
@@ -394,7 +403,7 @@ The contextual interviews and the lead user tests also shed light on the
 current ways of managing research data. Network drives were used by the
 users and their research groups to share all the data within the group, but
 the there were no clear guidelines on how to describe dataset metadata or how
-to organize the file structure on the network drives, which meant that it was
+to organize the file structure on the network drives. This meant that it was
 at times hard for the researchers to find relevant things from the drives and
 for the new members of the groups to get acquainted with the system. It turned
 out that currently research data management is not taught to the researchers,
@@ -426,9 +435,9 @@ process became clear. For example, the user from the Sound Group had hundreds
 of video files that could be uploaded to the publication system, but it would
 not make sense to spend the time to do that manually. In addition some of that
 data was being generated every day, so if that was to be published daily it
-would require an automated system. The Dataverse website offers a
-guide\footnote{\url{http://guides.dataverse.org/en/4.2/api/}} on how
-to use the API, but the users found that only the examples offered there were
+would require an automated system. The Dataverse offers a an API and a guide
+for using it\footnote{\url{http://guides.dataverse.org/en/4.2/api/}}. The
+user found that the guide with only example commands was
 not enough to make the use of API easy.
 
 After using the system for a longer time the users noted that the system could
@@ -438,17 +447,18 @@ the systems to the university network, which hinders both the ability of the
 researchers to work on it from different computers as well as the ability to
 share the information with collaborators from other places. There are, of
 course, ways to access data within the university network with VPN or other
-similar technologies, but that adds complexity and trouble to the process.
+similar technologies, but that adds complexity to the process.
 
-The longer user period also brought up the fact that there is information in
+The longer period of use also brought up the fact that there is information in
 how people store their data. For example, the folder structure of the network
 drive might split files into subfolders by date of data collection. This serves
 as implicit metadata, since there is no metadata file that tells that this
 piece of data is from a certain date, but a human using the system would
 understand it. Dataverse offers a chance to upload .zip file to the system
-and this way preserving folder structures, but for example in the case of
+and this way preserving folder structures. In the case of
 the Sound Group the video files are so large and there are so many of them
-that uploading a huge file would make the reuse of that file very hard.
+that uploading a huge file would make the reuse of that file very hard, not
+to mention the uploading and downloading the file.
 
 The installation and maintenance of the prototype Dataverse installation had
 both flaws and good things to it. The basic installation following the
@@ -460,8 +470,8 @@ did not end up working in the prototype solution, so the TwoRavens was tested
 with the actual Harvard Dataverse.
 
 Codewise the Dataverse implementation is clean - it follows good object
-oriented programming practices of splitting functionality into different
-classes and implementing short, well named methods. Dataverse has unit
+oriented programming practices. Functionality is split into different
+classes and the methods are short and well named. Dataverse has unit
 tests implemented as well as a Jenkins
 environment\footnote{\url{https://build.hmdc.harvard.edu:8443/}} for automated
 integration tests. The test coverage is not very high - only
@@ -514,7 +524,7 @@ improved. The mechanical processes of
 uploading and searching datasets from the system work, but both of them could
 be made more intuitive. Computerized upload of datasets is a must have feature
 when dealing with datasets that contain a large amount of files. In addition to
-taking care of these technical matters training for research data management
+taking care of these technical matters, training for research data management
 and integration of research data publishing to the workflow of scientists is
 required.
 
